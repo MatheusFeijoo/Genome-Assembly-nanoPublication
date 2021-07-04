@@ -1,0 +1,1903 @@
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:1_Head {
+  this: np:hasAssertion sub:1_assertion ;
+    np:hasProvenance sub:1_provenance ;
+    np:hasPublicationInfo sub:1_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:1_assertion {  
+  <https://doi.org/10.1126/science.1112631> a fabio:journalArticle ;
+    data:hasIdentifier sub:1_paper_doi , sub:1_paper_pmid ;
+    dcterms:language "eng" ;
+    dcterms:title "The genome sequence of Trypanosoma cruzi, etiologic agent of Chagas disease "@en ;
+    data:hasDescription sub:1_abstract ;
+    cito:extends sub:1_citingOrganism1.
+
+  sub:1_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1126/science.1112631> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:1_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/16020725/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:1_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Whole-genome sequencing of the protozoan pathogen Trypanosoma cruzi revealed that the diploid genome contains a predicted 22,570 proteins encoded by genes, of which 12,570 represent allelic pairs. Over 50% of the genome consists of repeated sequences, such as retrotransposons and genes for large families of surface molecules, which include trans-sialidases, mucins, gp63s, and a large novel family (>1300 copies) of mucin-associated surface protein (MASP) genes. Analyses of the T. cruzi, T. brucei, and Leishmania major (Tritryp) genomes imply differences from other eukaryotes in DNA repair and initiation of replication and reflect their unusual mitochondrial DNA. Although the Tritryp lack several classes of signaling molecules, their kinomes contain a large and diverse set of protein kinases and phosphatases; their size and diversity imply previously unknown interactions and regulatory processes, which may be targets for intervention. "@en .
+
+  sub:1_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1126/science.1112631>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000209065;
+    data:hasIdentifier sub:1_organism1.
+  
+  sub:1_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:1_provenance {
+  sub:1_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:1_journalPublication ;
+    prov:wasAttributedTo sub:1_authors ;
+    prov:hadPrimarySource sub:1_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/16020725/> ;
+    prov:wasDerivedFrom sub:1_journal .
+
+  sub:1_authors a prov:Agent ;
+    foaf:name "Najib M El-Sayed , Peter J Myler, Daniella C Bartholomeu, Daniel Nilsson, Gautam Aggarwal, Anh-Nhi Tran, Elodie Ghedin, Elizabeth A Worthey, Arthur L Delcher, Gaëlle Blandin, Scott J Westenberger, Elisabet Caler, Gustavo C Cerqueira, Carole Branche, Brian Haas, Atashi Anupama, Erik Arner, Lena Aslund, Philip Attipoe, Esteban Bontempi, Frédéric Bringaud, Peter Burton, Eithon Cadag, David A Campbell, Mark Carrington, Jonathan Crabtree, Hamid Darban, Jose Franco da Silveira, Pieter de Jong, Kimberly Edwards, Paul T Englund, Gholam Fazelina, Tamara Feldblyum, Marcela Ferella, Alberto Carlos Frasch, Keith Gull, David Horn, Lihua Hou, Yiting Huang, Ellen Kindlund, Michele Klingbeil, Sindy Kluge, Hean Koo, Daniela Lacerda, Mariano J Levin, Hernan Lorenzi, Tin Louie, Carlos Renato Machado, Richard McCulloch, Alan McKenna, Yumi Mizuno, Jeremy C Mottram, Siri Nelson, Stephen Ochaya, Kazutoyo Osoegawa, Grace Pai, Marilyn Parsons, Martin Pentony, Ulf Pettersson, Mihai Pop, Jose Luis Ramirez, Joel Rinta, Laura Robertson, Steven L Salzberg, Daniel O Sanchez, Amber Seyler, Reuben Sharma, Jyoti Shetty, Anjana J Simpson, Ellen Sisk, Martti T Tammi, Rick Tarleton, Santuza Teixeira, Susan Van Aken, Christy Vogt, Pauline N Ward, Bill Wickstead, Jennifer Wortman, Owen White, Claire M Fraser, Kenneth D Stuart, Björn Andersson"@en .
+
+  sub:1_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:1_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2005-07-15"^^xsd:integer ;
+    npa:creationMonth "2005-07"^^xsd:integer ;
+    npa:creationYear "2005"^^xsd:integer .
+
+  sub:1_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1126/science.1112631> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:1_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Science"@en ;
+    prism:volume "309"^^xsd:integer ;
+    prov:hadPrimarySource <https://science.sciencemag.org>.
+}
+
+sub:1_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:1_automaticAssertion ;
+    prov:wasAttributedTo sub:1_software , sub:1_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:1_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:1_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:1_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:2_Head {
+  this: np:hasAssertion sub:2_assertion ;
+    np:hasProvenance sub:2_provenance ;
+    np:hasPublicationInfo sub:2_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:2_assertion {  
+  <https://doi.org/10.1126/science.1112181> a fabio:journalArticle ;
+    data:hasIdentifier sub:2_paper_doi , sub:2_paper_pmid ;
+    foaf:topic_interest "comparative study"@en ;
+    dcterms:language "eng" ;
+    dcterms:title "Comparative genomics of trypanosomatid parasitic protozoa "@en ;
+    data:hasDescription sub:2_abstract ;
+    cito:extends sub:2_citingOrganism1.
+
+  sub:2_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1126/science.1112181> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:2_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/16020724/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:2_abstract data:hasDescriptionType data:abstract ;
+    prov:value "A comparison of gene content and genome architecture of Trypanosoma brucei, Trypanosoma cruzi, and Leishmania major, three related pathogens with different life cycles and disease pathology, revealed a conserved core proteome of about 6200 genes in large syntenic polycistronic gene clusters. Many species-specific genes, especially large surface antigen families, occur at nonsyntenic chromosome-internal and subtelomeric regions. Retroelements, structural RNAs, and gene family expansion are often associated with syntenic discontinuities that-along with gene divergence, acquisition and loss, and rearrangement within the syntenic regions-have shaped the genomes of each parasite. Contrary to recent reports, our analyses reveal no evidence that these species are descended from an ancestor that contained a photosynthetic endosymbiont. "@en .
+
+  sub:2_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1126/science.1112181>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000209065;
+    data:hasIdentifier sub:2_organism1.
+  
+  sub:2_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:2_provenance {
+  sub:2_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:2_journalPublication ;
+    prov:wasAttributedTo sub:2_authors ;
+    prov:hadPrimarySource sub:2_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/16020724/> ;
+    prov:wasDerivedFrom sub:2_journal .
+
+  sub:2_authors a prov:Agent ;
+    foaf:name "Najib M El-Sayed , Peter J Myler, Gaëlle Blandin, Matthew Berriman, Jonathan Crabtree, Gautam Aggarwal, Elisabet Caler, Hubert Renauld, Elizabeth A Worthey, Christiane Hertz-Fowler, Elodie Ghedin, Christopher Peacock, Daniella C Bartholomeu, Brian J Haas, Anh-Nhi Tran, Jennifer R Wortman, U Cecilia M Alsmark, Samuel Angiuoli, Atashi Anupama, Jonathan Badger, Frederic Bringaud, Eithon Cadag, Jane M Carlton, Gustavo C Cerqueira, Todd Creasy, Arthur L Delcher, Appolinaire Djikeng, T Martin Embley, Christopher Hauser, Alasdair C Ivens, Sarah K Kummerfeld, Jose B Pereira-Leal, Daniel Nilsson, Jeremy Peterson, Steven L Salzberg, Joshua Shallom, Joana C Silva, Jaideep Sundaram, Scott Westenberger, Owen White, Sara E Melville, John E Donelson, Björn Andersson, Kenneth D Stuart, Neil Hall"@en .
+
+  sub:2_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:2_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2005-07-15"^^xsd:integer ;
+    npa:creationMonth "2005-07"^^xsd:integer ;
+    npa:creationYear "2005"^^xsd:integer .
+
+  sub:2_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1126/science.1112181> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:2_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Science"@en ;
+    prism:volume "309"^^xsd:integer ;
+    prov:hadPrimarySource <https://science.sciencemag.org>.
+}
+
+sub:2_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:2_automaticAssertion ;
+    prov:wasAttributedTo sub:2_software , sub:2_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:2_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:2_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:2_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:3_Head {
+  this: np:hasAssertion sub:3_assertion ;
+    np:hasProvenance sub:3_provenance ;
+    np:hasPublicationInfo sub:3_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:3_assertion {  
+  <https://doi.org/10.1099/mgen.0.000177> a fabio:journalArticle ;
+    data:hasIdentifier sub:3_paper_doi , sub:3_paper_pmid , sub:3_paper_pmcid ;
+    dcterms:language "eng" ;
+    dcterms:title "Expanding an expanded genome: long-read sequencing of Trypanosoma cruzi "@en ;
+    data:hasDescription sub:3_abstract ;
+    prism:keywords "Chagas disease; PacBio; Trypanosoma cruzi; whole genome sequencing. " ;
+    cito:extends sub:3_citingOrganism1 ;
+    cito:extends sub:3_citingOrganism2 .
+
+  sub:3_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1099/mgen.0.000177> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:3_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/29708484/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:3_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc5994713/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:3_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Although the genome of Trypanosoma cruzi, the causative agent of Chagas disease, was first made available in 2005, with additional strains reported later, the intrinsic genome complexity of this parasite (the abundance of repetitive sequences and genes organized in tandem) has traditionally hindered high-quality genome assembly and annotation. This also limits diverse types of analyses that require high degrees of precision. Long reads generated by third-generation sequencing technologies are particularly suitable to address the challenges associated with T. cruzi's genome since they permit direct determination of the full sequence of large clusters of repetitive sequences without collapsing them. This, in turn, not only allows accurate estimation of gene copy numbers but also circumvents assembly fragmentation. Here, we present the analysis of the genome sequences of two T. cruzi clones: the hybrid TCC (TcVI) and the non-hybrid Dm28c (TcI), determined by PacBio Single Molecular Real-Time (SMRT) technology. The improved assemblies herein obtained permitted us to accurately estimate gene copy numbers, abundance and distribution of repetitive sequences (including satellites and retroelements). We found that the genome of T. cruzi is composed of a 'core compartment' and a 'disruptive compartment' which exhibit opposite GC content and gene composition. Novel tandem and dispersed repetitive sequences were identified, including some located inside coding sequences. Additionally, homologous chromosomes were separately assembled, allowing us to retrieve haplotypes as separate contigs instead of a unique mosaic sequence. Finally, manual annotation of surface multigene families, mucins and trans-sialidases allows now a better overview of these complex groups of genes. "@en .
+
+  sub:3_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1099/mgen.0.000177>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_003177095;
+    data:hasIdentifier sub:3_organism1.
+  
+  sub:3_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+
+  sub:3_citingOrganism2 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1099/mgen.0.000177>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_003177105;
+    data:hasIdentifier sub:3_organism2.
+  
+  sub:3_organism2 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:3_provenance {
+  sub:3_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:3_journalPublication ;
+    prov:wasAttributedTo sub:3_authors ;
+    prov:hadPrimarySource sub:3_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/29708484/> ;
+    prov:wasDerivedFrom sub:3_journal .
+
+  sub:3_authors a prov:Agent ;
+    foaf:name "Luisa Berná, Matias Rodriguez, María Laura Chiribao, Adriana Parodi-Talice, Sebastián Pita, Gastón Rijo, Fernando Alvarez-Valin, Carlos Robello"@en .
+
+  sub:3_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:3_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationMonth "2018-05"^^xsd:integer ;
+    npa:creationYear "2018"^^xsd:integer .
+
+  sub:3_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1099/mgen.0.000177> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:3_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Microbial Genomics"@en ;
+    prism:volume "4"^^xsd:integer ;
+    prov:hadPrimarySource <https://www.microbiologyresearch.org>.
+}
+
+sub:3_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:3_automaticAssertion ;
+    prov:wasAttributedTo sub:3_software , sub:3_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:3_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:3_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:3_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:4_Head {
+  this: np:hasAssertion sub:4_assertion ;
+    np:hasProvenance sub:4_provenance ;
+    np:hasPublicationInfo sub:4_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:4_assertion {  
+  <https://doi.org/10.1139/gen-2020-0092> a fabio:journalArticle ;
+    data:hasIdentifier sub:4_paper_doi , sub:4_paper_pmid ;
+    dcterms:language "eng" ;
+    dcterms:title "Sequence of Trypanosoma cruzi reference strain SC43 nuclear genome and kinetoplast maxicircle confirms a strong genetic structure among closely related parasite discrete typing units "@en ;
+    data:hasDescription sub:4_abstract ;
+    prism:keywords "Chagas disease; diversity; diversité; maladie de Chagas; parasite; phylogeny; phylogénie." ;
+    cito:extends sub:4_citingOrganism1.
+
+  sub:4_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1139/gen-2020-0092> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:4_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/33086026/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:4_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Chagas disease is a zoonotic, parasitic, vector-borne neglected tropical disease that affects the lives of over 6 million people throughout the Americas. Trypanosoma cruzi, the causative agent, presents extensive genetic diversity. Here we report the genome sequence of reference strain SC43cl1, a hybrid strain belonging to the TcV discrete typing unit (DTU). The assembled diploid genome was 79 Mbp in size, divided into 1236 contigs with an average coverage reaching 180×. There was extensive synteny of SC43cl1 genome with closely related TcV and TcVI genomes, with limited sequence rearrangements. TcVI genomes included several expansions not present in TcV strains. Comparative analysis of both nuclear and kinetoplast sequences clearly separated TcV from TcVI strains, which strongly supports the current DTU classification. "@en .
+
+  sub:4_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1139/gen-2020-0092>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_015455285;
+    data:hasIdentifier sub:4_organism1.
+  
+  sub:4_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:4_provenance {
+  sub:4_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:4_journalPublication ;
+    prov:wasAttributedTo sub:4_authors ;
+    prov:hadPrimarySource sub:4_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/33086026/> ;
+    prov:wasDerivedFrom sub:4_journal .
+
+  sub:4_authors a prov:Agent ;
+    foaf:name "James DeCuir, Weihong Tu, Eric Dumonteil, Claudia Herrera"@en .
+
+  sub:4_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:4_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationMonth "2021-05"^^xsd:integer ;
+    npa:creationYear "2021"^^xsd:integer .
+
+  sub:4_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1139/gen-2020-0092> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:4_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Genome"@en ;
+    prism:volume "64"^^xsd:integer ;
+    prov:hadPrimarySource <https://cdnsciencepub.com>.
+}
+
+
+sub:4_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:4_automaticAssertion ;
+    prov:wasAttributedTo sub:4_software , sub:4_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:4_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:4_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:4_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:5_Head {
+  this: np:hasAssertion sub:5_assertion ;
+    np:hasProvenance sub:5_provenance ;
+    np:hasPublicationInfo sub:5_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:5_assertion {  
+  <https://doi.org/10.1093/gbe/evz129> a fabio:journalArticle ;
+    data:hasIdentifier sub:5_paper_doi , sub:5_paper_pmid , sub:5_paper_pmcid ;
+    dcterms:language "eng" ;
+    dcterms:title "Nanopore Sequencing Significantly Improves Genome Assembly of the Protozoan Parasite Trypanosoma cruzi "@en ;
+    data:hasDescription sub:5_abstract ;
+    prism:keywords "Trypanosoma cruzi; Berenice; Chagas disease; Oxford Nanopore Technologies; hybrid assembly; protozoan parasites. " ;
+    cito:extends sub:5_citingOrganism1.
+
+  sub:5_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1093/gbe/evz129> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:5_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/31218350/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:5_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc6640297/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:5_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Chagas disease was described by Carlos Chagas, who first identified the parasite Trypanosoma cruzi from a 2-year-old girl called Berenice. Many T. cruzi sequencing projects based on short reads have demonstrated that genome assembly and downstream comparative analyses are extremely challenging in this species, given that half of its genome is composed of repetitive sequences. Here, we report de novo assemblies, annotation, and comparative analyses of the Berenice strain using a combination of Illumina short reads and MinION long reads. Our work demonstrates that Nanopore sequencing improves T. cruzi assembly contiguity and increases the assembly size in ∼16 Mb. Specifically, we found that assembly improvement also refines the completeness of coding regions for both single-copy genes and repetitive transposable elements. Beyond its historical and epidemiological importance, Berenice constitutes a fundamental resource because it now constitutes a high-quality assembly available for TcII (clade C), a prevalent lineage causing human infections in South America. The availability of Berenice genome expands the known genetic diversity of these parasites and reinforces the idea that T. cruzi is intraspecifically divided in three main clades. Finally, this work represents the introduction of Nanopore technology to resolve complex protozoan genomes, supporting its subsequent application for improving trypanosomatid and other highly repetitive genomes. "@en .
+
+  sub:5_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1093/gbe/evz129>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_013358655;
+    data:hasIdentifier sub:5_organism1.
+  
+  sub:5_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:5_provenance {
+  sub:5_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:5_journalPublication ;
+    prov:wasAttributedTo sub:5_authors ;
+    prov:hadPrimarySource sub:5_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/31218350/> ;
+    prov:wasDerivedFrom sub:5_journal .
+
+  sub:5_authors a prov:Agent ;
+    foaf:name "Florencia Díaz-Viraqué, Sebastián Pita, Gonzalo Greif, Rita de Cássia Moreira de Souza, Gregorio Iraola, Carlos Robello"@en .
+
+  sub:5_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:5_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2019-07-01"^^xsd:integer ;
+    npa:creationMonth "2019-07"^^xsd:integer ;
+    npa:creationYear "2019"^^xsd:integer .
+
+  sub:5_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1093/gbe/evz129> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:5_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Genome Biology and Evolution"@en ;
+    prism:volume "11"^^xsd:integer ;
+    prov:hadPrimarySource <https://academic.oup.com/gbe>.
+}
+
+
+sub:5_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:5_automaticAssertion ;
+    prov:wasAttributedTo sub:5_software , sub:5_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:5_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:5_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:5_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:6_Head {
+  this: np:hasAssertion sub:6_assertion ;
+    np:hasProvenance sub:6_provenance ;
+    np:hasPublicationInfo sub:6_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:6_assertion {  
+  <https://doi.org/10.1128/genomea.01114-13> a fabio:journalArticle ;
+    data:hasIdentifier sub:6_paper_doi , sub:6_paper_pmid , sub:6_paper_pmcid ;
+    dcterms:language "eng" ;
+    dcterms:title "Trypanosoma cruzi Clone Dm28c Draft Genome Sequence"@en ;
+    data:hasDescription sub:6_abstract ;
+    cito:extends sub:6_citingOrganism1.
+
+  sub:6_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1128/genomea.01114-13> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:6_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/24482508/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:6_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc3907723/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:6_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Trypanosoma cruzi affects millions of people worldwide. Clinical variability of Chagas disease can be due to the genetic variability of this parasite, requiring further genome studies. Here we report the genome sequence of the T. cruzi Dm28c clone (TcI), a strain related to the sylvatic cycle of the parasite. "@en .
+
+  sub:6_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1128/genomea.01114-13>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_000496795;
+    data:hasIdentifier sub:6_organism1.
+  
+  sub:6_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:6_provenance {
+  sub:6_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:6_journalPublication ;
+    prov:wasAttributedTo sub:6_authors ;
+    prov:hadPrimarySource sub:6_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/24482508/> ;
+    prov:wasDerivedFrom sub:6_journal .
+
+  sub:6_authors a prov:Agent ;
+    foaf:name "Edmundo Carlos Grisard, Santuza Maria Ribeiro Teixeira, Luiz Gonzaga Paula de Almeida, Patricia Hermes Stoco, Alexandra Lehmkuhl Gerber, Carlos Talavera-López, Oberdan Cunha Lima, Björn Andersson, Ana Tereza R de Vasconcelos"@en .
+
+  sub:6_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:6_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2014-01-30"^^xsd:integer ;
+    npa:creationMonth "2014-01"^^xsd:integer ;
+    npa:creationYear "2014"^^xsd:integer .
+
+  sub:6_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1128/genomea.01114-13> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:6_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Genome Announcements"@en ;
+    prism:volume "2"^^xsd:integer ;
+    prov:hadPrimarySource <https://journals.asm.org>.
+}
+
+sub:6_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:6_automaticAssertion ;
+    prov:wasAttributedTo sub:6_software , sub:6_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:6_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:6_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:6_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:7_Head {
+  this: np:hasAssertion sub:7_assertion ;
+    np:hasProvenance sub:7_provenance ;
+    np:hasPublicationInfo sub:7_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:7_assertion {  
+  <https://doi.org/10.1186/1471-2164-13-531> a fabio:journalArticle ;
+    data:hasIdentifier sub:7_paper_doi , sub:7_paper_pmid , sub:7_paper_pmcid ;
+    foaf:topic_interest "Comparative Study"@en ;
+    dcterms:language "eng" ;
+    dcterms:title "Comparative genomic analysis of human infective Trypanosoma cruzi lineages with the bat-restricted subspecies T. cruzi marinkellei "@en ;
+    data:hasDescription sub:7_abstract ;
+    cito:extends sub:7_citingOrganism1 ;
+    cito:extends sub:7_citingOrganism2 .
+
+  sub:7_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1186/1471-2164-13-531> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:7_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/23035642/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:7_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc3507753/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:7_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Background: Trypanosoma cruzi marinkellei is a bat-associated parasite of the subgenus Schizotrypanum and it is regarded as a T. cruzi subspecies. Here we report a draft genome sequence of T. c. marinkellei and comparison with T. c. cruzi. Our aims were to identify unique sequences and genomic features, which may relate to their distinct niches.Results: The T. c. marinkellei genome was found to be ~11% smaller than that of the human-derived parasite T. c. cruzi Sylvio X10. The genome size difference was attributed to copy number variation of coding and non-coding sequences. The sequence divergence in coding regions was ~7.5% between T. c. marinkellei and T. c. cruzi Sylvio X10. A unique acetyltransferase gene was identified in T. c. marinkellei, representing an example of a horizontal gene transfer from eukaryote to eukaryote. Six of eight examined gene families were expanded in T. c. cruzi Sylvio X10. The DGF gene family was expanded in T. c. marinkellei. T. c. cruzi Sylvio X10 contained ~1.5 fold more sequences related to VIPER and L1Tc elements. Experimental infections of mammalian cell lines indicated that T. c. marinkellei has the capacity to invade non-bat cells and undergo intracellular replication.Conclusions: Several unique sequences were identified in the comparison, including a potential subspecies-specific gene acquisition in T. c. marinkellei. The identified differences reflect the distinct evolutionary trajectories of these parasites and represent targets for functional investigation."@en .
+
+  sub:7_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1186/1471-2164-13-531>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_000300495;
+    data:hasIdentifier sub:7_organism1.
+  
+  sub:7_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+
+  sub:7_citingOrganism2 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1186/1471-2164-13-531>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_000188675;
+    data:hasIdentifier sub:7_organism2.
+  
+  sub:7_organism2 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" . 
+}
+
+sub:7_provenance {
+  sub:7_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:7_journalPublication ;
+    prov:wasAttributedTo sub:7_authors ;
+    prov:hadPrimarySource sub:7_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/23035642/> ;
+    prov:wasDerivedFrom sub:7_journal .
+
+  sub:7_authors a prov:Agent ;
+    foaf:name "Oscar Franzén, Carlos Talavera-López, Stephen Ochaya, Claire E Butler, Louisa A Messenger, Michael D Lewis, Martin S Llewellyn, Cornelis J Marinkelle, Kevin M Tyler, Michael A Miles, Björn Andersson"@en .
+
+  sub:7_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:7_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2012-10-05"^^xsd:integer ;
+    npa:creationMonth "2012-10"^^xsd:integer ;
+    npa:creationYear "2012"^^xsd:integer .
+
+  sub:7_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1186/1471-2164-13-531> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:7_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "BMC Genomics"@en ;
+    prism:volume "13"^^xsd:integer ;
+    prov:hadPrimarySource <https://bmcgenomics.biomedcentral.com>.
+}
+
+sub:7_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:7_automaticAssertion ;
+    prov:wasAttributedTo sub:7_software , sub:7_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:7_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:7_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:7_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:8_Head {
+  this: np:hasAssertion sub:8_assertion ;
+    np:hasProvenance sub:8_provenance ;
+    np:hasPublicationInfo sub:8_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:8_assertion {  
+  <https://doi.org/10.1371/journal.pntd.0000984> a fabio:journalArticle ;
+    data:hasIdentifier sub:8_paper_doi , sub:8_paper_pmid , sub:8_paper_pmcid ;
+    foaf:topic_interest "Comparative Study"@en ;
+    dcterms:language "eng" ;
+    dcterms:title "Shotgun sequencing analysis of Trypanosoma cruzi I Sylvio X10/1 and comparison with T. cruzi VI CL Brener "@en ;
+    data:hasDescription sub:8_abstract ;
+    cito:extends sub:8_citingOrganism1.
+
+  sub:8_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1371/journal.pntd.0000984> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:8_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/21408126/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:8_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc3050914/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:8_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Trypanosoma cruzi is the causative agent of Chagas disease, which affects more than 9 million people in Latin America. We have generated a draft genome sequence of the TcI strain Sylvio X10/1 and compared it to the TcVI reference strain CL Brener to identify lineage-specific features. We found virtually no differences in the core gene content of CL Brener and Sylvio X10/1 by presence/absence analysis, but 6 open reading frames from CL Brener were missing in Sylvio X10/1. Several multicopy gene families, including DGF, mucin, MASP and GP63 were found to contain substantially fewer genes in Sylvio X10/1, based on sequence read estimations. 1,861 small insertion-deletion events and 77,349 nucleotide differences, 23% of which were non-synonymous and associated with radical amino acid changes, further distinguish these two genomes. There were 336 genes indicated as under positive selection, 145 unique to T. cruzi in comparison to T. brucei and Leishmania. This study provides a framework for further comparative analyses of two major T. cruzi lineages and also highlights the need for sequencing more strains to understand fully the genomic composition of this parasite. "@en .
+
+  sub:8_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1371/journal.pntd.0000984>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_000188675;
+    data:hasIdentifier sub:8_organism1.
+  
+  sub:8_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:8_provenance {
+  sub:8_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:8_journalPublication ;
+    prov:wasAttributedTo sub:8_authors ;
+    prov:hadPrimarySource sub:8_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/21408126/> ;
+    prov:wasDerivedFrom sub:8_journal .
+
+  sub:8_authors a prov:Agent ;
+    foaf:name "Oscar Franzén, Stephen Ochaya, Ellen Sherwood, Michael D Lewis, Martin S Llewellyn, Michael A Miles, Björn Andersson"@en .
+
+  sub:8_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:8_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2011-03-08"^^xsd:integer ;
+    npa:creationMonth "2011-03"^^xsd:integer ;
+    npa:creationYear "2011"^^xsd:integer .
+
+  sub:8_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1371/journal.pntd.0000984> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:8_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "PLOS Neglected Tropical Diseases"@en ;
+    prism:volume "5"^^xsd:integer ;
+    prov:hadPrimarySource <https://journals.plos.org/plosntds/>.
+}
+
+sub:8_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:8_automaticAssertion ;
+    prov:wasAttributedTo sub:8_software , sub:8_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:8_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:8_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:8_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:9_Head {
+  this: np:hasAssertion sub:9_assertion ;
+    np:hasProvenance sub:9_provenance ;
+    np:hasPublicationInfo sub:9_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:9_assertion {  
+  <https://doi.org/10.1186/s12864-018-5112-0> a fabio:journalArticle ;
+    data:hasIdentifier sub:9_paper_doi , sub:9_paper_pmid , sub:9_paper_pmcid ;
+    dcterms:language "eng" ;
+    dcterms:title "Genomic comparison of Trypanosoma conorhini and Trypanosoma rangeli to Trypanosoma cruzi strains of high and low virulence "@en ;
+    data:hasDescription sub:9_abstract ;
+    prism:keywords "Comparative genomics; Genome sequencing; Trypanosomatids." ;
+    cito:extends sub:9_citingOrganism1 ;
+    cito:extends sub:9_citingOrganism2 .
+
+  sub:9_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1186/s12864-018-5112-0> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:9_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/30355302/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:9_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc6201504/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:9_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Background: Trypanosoma conorhini and Trypanosoma rangeli, like Trypanosoma cruzi, are kinetoplastid protist parasites of mammals displaying divergent hosts, geographic ranges and lifestyles. Largely nonpathogenic T. rangeli and T. conorhini represent clades that are phylogenetically closely related to the T. cruzi and T. cruzi-like taxa and provide insights into the evolution of pathogenicity in those parasites. T. rangeli, like T. cruzi is endemic in many Latin American countries, whereas T. conorhini is tropicopolitan. T. rangeli and T. conorhini are exclusively extracellular, while T. cruzi has an intracellular stage in the mammalian host.Results: Here we provide the first comprehensive sequence analysis of T. rangeli AM80 and T. conorhini 025E, and provide a comparison of their genomes to those of T. cruzi G and T. cruzi CL, respectively members of T. cruzi lineages TcI and TcVI. We report de novo assembled genome sequences of the low-virulent T. cruzi G, T. rangeli AM80, and T. conorhini 025E ranging from ~ 21-25 Mbp, with ~ 10,000 to 13,000 genes, and for the highly virulent and hybrid T. cruzi CL we present a ~ 65 Mbp in-house assembled haplotyped genome with ~ 12,500 genes per haplotype. Single copy orthologs of the two T. cruzi strains exhibited ~ 97% amino acid identity, and ~ 78% identity to proteins of T. rangeli or T. conorhini. Proteins of the latter two organisms exhibited ~ 84% identity. T. cruzi CL exhibited the highest heterozygosity. T. rangeli and T. conorhini displayed greater metabolic capabilities for utilization of complex carbohydrates, and contained fewer retrotransposons and multigene family copies, i.e. trans-sialidases, mucins, DGF-1, and MASP, compared to T. cruzi.Conclusions: Our analyses of the T. rangeli and T. conorhini genomes closely reflected their phylogenetic proximity to the T. cruzi clade, and were largely consistent with their divergent life cycles. Our results provide a greater context for understanding the life cycles, host range expansion, immunity evasion, and pathogenesis of these trypanosomatids."@en .
+
+  sub:9_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1186/s12864-018-5112-0>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_003719455;
+    data:hasIdentifier sub:9_organism1.
+  
+  sub:9_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+
+  sub:9_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1186/s12864-018-5112-0>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCA_003719155;
+    data:hasIdentifier sub:9_organism1.
+  
+  sub:9_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:9_provenance {
+  sub:9_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:9_journalPublication ;
+    prov:wasAttributedTo sub:9_authors ;
+    prov:hadPrimarySource sub:9_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/30355302/> ;
+    prov:wasDerivedFrom sub:9_journal .
+
+  sub:9_authors a prov:Agent ;
+    foaf:name "Katie R Bradwell, Vishal N Koparde, Andrey V Matveyev, Myrna G Serrano, João M P Alves, Hardik Parikh, Bernice Huang, Vladimir Lee, Oneida Espinosa-Alvarez, Paola A Ortiz, André G Costa-Martins, Marta M G Teixeira, Gregory A Buck"@en .
+
+  sub:9_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:9_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2018-10-24"^^xsd:integer ;
+    npa:creationMonth "2018-10"^^xsd:integer ;
+    npa:creationYear "2018"^^xsd:integer .
+
+  sub:9_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1186/s12864-018-5112-0> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:9_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "BMC Genomics"@en ;
+    prism:volume "19"^^xsd:integer ;
+    prov:hadPrimarySource <https://bmcgenomics.biomedcentral.com>.
+}
+
+sub:9_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:9_automaticAssertion ;
+    prov:wasAttributedTo sub:9_software , sub:9_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:9_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:9_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:9_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:10_Head {
+  this: np:hasAssertion sub:10_assertion ;
+    np:hasProvenance sub:10_provenance ;
+    np:hasPublicationInfo sub:10_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:10_assertion {  
+  <https://doi.org/10.1101/gr.122945.111> a fabio:journalArticle ;
+    data:hasIdentifier sub:10_paper_doi , sub:10_paper_pmid , sub:10_paper_pmcid ;
+    dc:language "eng" ;
+    dc:title "Chromosome and gene copy number variation allow major structural change between species and strains of Leishmania"@en ;
+    data:hasDescription sub:10_abstract ;
+    cito:extends sub:citingOrganism1 ;
+    cito:extends sub:citingOrganism2 ;
+    cito:extends sub:citingOrganism3 ;
+    cito:extends sub:citingOrganism4 .
+
+  sub:10_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1101/gr.122945.111> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:10_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/22038252/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:10_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc3227102/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:10_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Leishmania parasites cause a spectrum of clinical pathology in humans ranging from disfiguring cutaneous lesions to fatal visceral leishmaniasis. We have generated a reference genome for Leishmania mexicana and refined the reference genomes for Leishmania major, Leishmania infantum, and Leishmania braziliensis. This has allowed the identification of a remarkably low number of genes or paralog groups (2, 14, 19, and 67, respectively) unique to one species. These were found to be conserved in additional isolates of the same species. We have predicted allelic variation and find that in these isolates, L. major and L. infantum have a surprisingly low number of predicted heterozygous SNPs compared with L. braziliensis and L. mexicana. We used short read coverage to infer ploidy and gene copy numbers, identifying large copy number variations between species, with 200 tandem gene arrays in L. major and 132 in L. mexicana. Chromosome copy number also varied significantly between species, with nine supernumerary chromosomes in L. infantum, four in L. mexicana, two in L. braziliensis, and one in L. major. A significant bias against gene arrays on supernumerary chromosomes was shown to exist, indicating that duplication events occur more frequently on disomic chromosomes. Taken together, our data demonstrate that there is little variation in unique gene content across Leishmania species, but large-scale genetic heterogeneity can result through gene amplification on disomic chromosomes and variation in chromosome number. Increased gene copy number due to chromosome amplification may contribute to alterations in gene expression in response to environmental conditions in the host, providing a genetic basis for disease tropism."@en .
+
+  sub:10_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1101/gr.122945.111>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000002725;
+    data:hasIdentifier sub:10_organism1.
+  
+  sub:10_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+
+    sub:10_citingOrganism2 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1101/gr.122945.111>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000002875;
+    data:hasIdentifier sub:10_organism2.
+  
+  sub:10_organism2 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+
+  sub:10_citingOrganism3 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1101/gr.122945.111>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000002845;
+    data:hasIdentifier sub:10_organism3.
+  
+  sub:10_organism3 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .  
+
+  sub:10_citingOrganism4 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1101/gr.122945.111>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000234665;
+    data:hasIdentifier sub:10_organism4.
+  
+  sub:10_organism4 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" . 
+}
+
+sub:10_provenance {
+  sub:10_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:1_journalPublication ;
+    prov:wasAttributedTo sub:1_authors ;
+    prov:hadPrimarySource sub:1_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/22038252/> ;
+    prov:wasDerivedFrom sub:1_journal .
+
+  sub:10_authors a prov:Agent ;
+    foaf:name "Matthew B Rogers, James D Hilley, Nicholas J Dickens, Jon Wilkes, Paul A Bates, Daniel P Depledge, David Harris, Yerim Her, Pawel Herzyk, Hideo Imamura, Thomas D Otto, Mandy Sanders, Kathy Seeger, Jean-Claude Dujardin, Matthew Berriman, Deborah F Smith, Christiane Hertz-Fowler, Jeremy C Mottram"@en .
+
+  sub:10_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:1_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationMonth "2011-12"^^xsd:integer ;
+    npa:creationYear "2011"^^xsd:integer .
+
+  sub:10_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1101/gr.122945.111> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:10_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Genome Research"@en ;
+    prism:volume "21"^^xsd:integer ;
+    prov:hadPrimarySource <http://genome.cshlp.org>.
+}
+
+sub:10_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:1_automaticAssertion ;
+    prov:wasAttributedTo sub:1_software , sub:1_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:10_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:10_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:10_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:11_Head {
+  this: np:hasAssertion sub:11_assertion ;
+    np:hasProvenance sub:11_provenance ;
+    np:hasPublicationInfo sub:11_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:11_assertion {  
+  <https://doi.org/10.1126/science.1112680> a fabio:journalArticle ;
+    data:hasIdentifier sub:11_paper_doi , sub:11_paper_pmid , sub:11_paper_pmcid ;
+    dc:language "eng" ;
+    dc:title "The genome of the kinetoplastid parasite, Leishmania major"@en ;
+    data:hasDescription sub:11_abstract ;
+    cito:extends sub:citingOrganism1.
+
+  sub:11_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1126/science.1112680> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:11_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/16020728/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:11_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc1470643/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:11_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Leishmania species cause a spectrum of human diseases in tropical and subtropical regions of the world. We have sequenced the 36 chromosomes of the 32.8-megabase haploid genome of Leishmania major (Friedlin strain) and predict 911 RNA genes, 39 pseudogenes, and 8272 protein-coding genes, of which 36% can be ascribed a putative function. These include genes involved in host-pathogen interactions, such as proteolytic enzymes, and extensive machinery for synthesis of complex surface glycoconjugates. The organization of protein-coding genes into long, strand-specific, polycistronic clusters and lack of general transcription factors in the L. major, Trypanosoma brucei, and Trypanosoma cruzi (Tritryp) genomes suggest that the mechanisms regulating RNA polymerase II-directed transcription are distinct from those operating in other eukaryotes, although the trypanosomatids appear capable of chromatin remodeling. Abundant RNA-binding proteins are encoded in the Tritryp genomes, consistent with active posttranscriptional regulation of gene expression."@en .
+
+  sub:11_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1126/science.1112680>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000002725;
+    data:hasIdentifier sub:11_organism1.
+  
+  sub:11_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:11_provenance {
+  sub:11_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:1_journalPublication ;
+    prov:wasAttributedTo sub:1_authors ;
+    prov:hadPrimarySource sub:1_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/16020728/> ;
+    prov:wasDerivedFrom sub:1_journal .
+
+  sub:11_authors a prov:Agent ;
+    foaf:name "Alasdair C Ivens, Christopher S Peacock, Elizabeth A Worthey, Lee Murphy, Gautam Aggarwal, Matthew Berriman, Ellen Sisk, Marie-Adele Rajandream, Ellen Adlem, Rita Aert, Atashi Anupama, Zina Apostolou, Philip Attipoe, Nathalie Bason, Christopher Bauser, Alfred Beck, Stephen M Beverley, Gabriella Bianchettin, Katja Borzym, Gordana Bothe, Carlo V Bruschi, Matt Collins, Eithon Cadag, Laura Ciarloni, Christine Clayton, Richard M R Coulson, Ann Cronin, Angela K Cruz, Robert M Davies, Javier De Gaudenzi, Deborah E Dobson, Andreas Duesterhoeft, Gholam Fazelina, Nigel Fosker, Alberto Carlos Frasch, Audrey Fraser, Monika Fuchs, Claudia Gabel, Arlette Goble, André Goffeau, David Harris, Christiane Hertz-Fowler, Helmut Hilbert, David Horn, Yiting Huang, Sven Klages, Andrew Knights, Michael Kube, Natasha Larke, Lyudmila Litvin, Angela Lord, Tin Louie, Marco Marra, David Masuy, Keith Matthews, Shulamit Michaeli, Jeremy C Mottram, Silke Müller-Auer, Heather Munden, Siri Nelson, Halina Norbertczak, Karen Oliver, Susan O'neil, Martin Pentony, Thomas M Pohl, Claire Price, Bénédicte Purnelle, Michael A Quail, Ester Rabbinowitsch, Richard Reinhardt, Michael Rieger, Joel Rinta, Johan Robben, Laura Robertson, Jeronimo C Ruiz, Simon Rutter, David Saunders, Melanie Schäfer, Jacquie Schein, David C Schwartz, Kathy Seeger, Amber Seyler, Sarah Sharp, Heesun Shin, Dhileep Sivam, Rob Squares, Steve Squares, Valentina Tosato, Christy Vogt, Guido Volckaert, Rolf Wambutt, Tim Warren, Holger Wedler, John Woodward, Shiguo Zhou, Wolfgang Zimmermann, Deborah F Smith, Jenefer M Blackwell, Kenneth D Stuart, Bart Barrell, Peter J Myler"@en .
+
+  sub:11_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:1_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2005-07-15"^^xsd:integer ;
+    npa:creationMonth "2005-07"^^xsd:integer ;
+    npa:creationYear "2005"^^xsd:integer .
+
+  sub:11_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1126/science.1112680> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:11_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Science"@en ;
+    prism:volume "309"^^xsd:integer ;
+    prov:hadPrimarySource <https://science.sciencemag.org>.
+}
+
+sub:11_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:1_automaticAssertion ;
+    prov:wasAttributedTo sub:1_software , sub:1_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:11_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:11_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:11_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:12_Head {
+  this: np:hasAssertion sub:12_assertion ;
+    np:hasProvenance sub:12_provenance ;
+    np:hasPublicationInfo sub:12_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:12_assertion {  
+  <https://doi.org/10.1101/gr.123430.111> a fabio:journalArticle ;
+    data:hasIdentifier sub:12_paper_doi , sub:12_paper_pmid , sub:12_paper_pmcid ;
+    dc:language "eng" ;
+    dc:title "Whole genome sequencing of multiple Leishmania donovani clinical isolates provides insights into population structure and mechanisms of drug resistance"@en ;
+    data:hasDescription sub:12_abstract ;
+    cito:extends sub:citingOrganism1.
+
+  sub:12_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1101/gr.123430.111> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:12_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/22038251/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:12_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc3227103/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:12_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Visceral leishmaniasis is a potentially fatal disease endemic to large parts of Asia and Africa, primarily caused by the protozoan parasite Leishmania donovani. Here, we report a high-quality reference genome sequence for a strain of L. donovani from Nepal, and use this sequence to study variation in a set of 16 related clinical lines, isolated from visceral leishmaniasis patients from the same region, which also differ in their response to in vitro drug susceptibility. We show that whole-genome sequence data reveals genetic structure within these lines not shown by multilocus typing, and suggests that drug resistance has emerged multiple times in this closely related set of lines. Sequence comparisons with other Leishmania species and analysis of single-nucleotide diversity within our sample showed evidence of selection acting in a range of surface- and transport-related genes, including genes associated with drug resistance. Against a background of relative genetic homogeneity, we found extensive variation in chromosome copy number between our lines. Other forms of structural variation were significantly associated with drug resistance, notably including gene dosage and the copy number of an experimentally verified circular episome present in all lines and described here for the first time. This study provides a basis for more powerful molecular profiling of visceral leishmaniasis, providing additional power to track the drug resistance and epidemiology of an important human pathogen."@en .
+
+  sub:12_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1101/gr.123430.111>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000227135;
+    data:hasIdentifier sub:12_organism1.
+  
+  sub:12_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:12_provenance {
+  sub:12_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:1_journalPublication ;
+    prov:wasAttributedTo sub:1_authors ;
+    prov:hadPrimarySource sub:1_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/22038251/> ;
+    prov:wasDerivedFrom sub:1_journal .
+
+  sub:12_authors a prov:Agent ;
+    foaf:name "Tim Downing, Hideo Imamura, Saskia Decuypere, Taane G Clark, Graham H Coombs, James A Cotton, James D Hilley, Simonne de Doncker, Ilse Maes, Jeremy C Mottram, Mike A Quail, Suman Rijal, Mandy Sanders, Gabriele Schönian, Olivia Stark, Shyam Sundar, Manu Vanaerschot, Christiane Hertz-Fowler, Jean-Claude Dujardin, Matthew Berriman"@en .
+
+  sub:12_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:1_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationMonth "2011-12"^^xsd:integer ;
+    npa:creationYear "2011"^^xsd:integer .
+
+  sub:12_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1101/gr.123430.111> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:12_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Genome Research"@en ;
+    prism:volume "21"^^xsd:integer ;
+    prov:hadPrimarySource <http://genome.cshlp.org/>.
+}
+
+sub:12_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:1_automaticAssertion ;
+    prov:wasAttributedTo sub:1_software , sub:1_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:12_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:12_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:12_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:13_Head {
+  this: np:hasAssertion sub:13_assertion ;
+    np:hasProvenance sub:13_provenance ;
+    np:hasPublicationInfo sub:13_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:13_assertion {  
+  <https://doi.org/10.1038/srep08550> a fabio:journalArticle ;
+    data:hasIdentifier sub:13_paper_doi , sub:13_paper_pmid , sub:13_paper_pmcid ;
+    dc:language "eng" ;
+    dc:title "The genome of Leishmania panamensis: insights into genomics of the L. (Viannia) subgenus"@en ;
+    data:hasDescription sub:13_abstract ;
+    cito:extends sub:citingOrganism1.
+
+  sub:13_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1038/srep08550> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:13_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/25707621/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:13_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc4338418/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:13_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Kinetoplastid parasites of the Leishmania genus cause several forms of leishmaniasis. Leishmania species pathogenic to human are separated into two subgenera, Leishmania (Leishmania) and L. (Viannia). Species from the Viannia subgenus cause predominantly cutaneous leishmaniasis in Central and South America, occasionally leading to more severe clinical presentations. Although the genomes of several species of Leishmania have been sequenced to date, only one belongs to this rather different subgenus. Here we explore the unique features of the Viannia subgenus by sequencing and analyzing the genome of L. (Viannia) panamensis. Against a background of conservation in gene content and synteny, we found key differences at the genomic level that may explain the occurrence of molecular processes involving nucleic acid manipulation and differential modification of surface glycoconjugates. These differences may in part explain some phenotypic characteristics of the Viannia parasites, including their increased adaptive capacity and enhanced metastatic ability."@en .
+
+  sub:13_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1038/srep08550>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000755165;
+    data:hasIdentifier sub:13_organism1.
+  
+  sub:13_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:13_provenance {
+  sub:13_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:1_journalPublication ;
+    prov:wasAttributedTo sub:1_authors ;
+    prov:hadPrimarySource sub:1_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/25707621/> ;
+    prov:wasDerivedFrom sub:1_journal .
+
+  sub:13_authors a prov:Agent ;
+    foaf:name "Alejandro Llanes , Carlos Mario Restrepo , Gina Del Vecchio , Franklin José Anguizola , Ricardo Lleonart "@en .
+
+  sub:13_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:1_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationDay "2015-02-24"^^xsd:integer ;
+    npa:creationMonth "2015-02"^^xsd:integer ;
+    npa:creationYear "2015"^^xsd:integer .
+
+  sub:13_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1038/srep08550> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:13_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Scientific Reports"@en ;
+    prism:volume "5"^^xsd:integer ;
+    prov:hadPrimarySource <https://doi.org/10.1038/srep08550>.
+}
+
+sub:13_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:1_automaticAssertion ;
+    prov:wasAttributedTo sub:1_software , sub:1_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:13_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:13_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:13_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/sciPub_npub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix gad_npub: <https://github.com/GenKnowlets/genknowlets/gad_npub> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix biol: <https://ontologi.es/biol/ns.html> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix data: <http://purl.org/spar/datacite> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix doi: <http://dx.doi.org/> .
+@prefix wiki: <https://www.wikidata.org/wiki/Property:> .
+@prefix cito: <http://purl.org/spar/cito> .
+@prefix fabio: <http://purl.org/spar/fabio> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:14_Head {
+  this: np:hasAssertion sub:14_assertion ;
+    np:hasProvenance sub:14_provenance ;
+    np:hasPublicationInfo sub:14_PublicationInfo ;
+    a np:Nanopublication .
+}
+
+sub:14_assertion {  
+  <https://doi.org/10.1038/ng2053> a fabio:journalArticle ;
+    data:hasIdentifier sub:14_paper_doi , sub:14_paper_pmid , sub:14_paper_pmcid ;
+    dc:language "eng" ;
+    dc:title "Comparative genomic analysis of three Leishmania species that cause diverse human disease"@en ;
+    data:hasDescription sub:14_abstract ;
+    cito:extends sub:citingOrganism1 ;
+    cito:extends sub:citingOrganism2 .
+
+  sub:14_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1038/ng2053> ;
+    data:usesIdentifierScheme data:doi .
+  
+  sub:14_paper_pmid a data:PrimaryResourceIdentifier ;
+    prov:value <https://pubmed.ncbi.nlm.nih.gov/17572675/> ;
+    data:usesIdentifierScheme edam:data_1187 .
+
+  sub:14_paper_pmcid a data:PrimaryResourceIdentifier ;
+    prov:value <http://www.ncbi.nlm.nih.gov/pmc/articles/pmc2592530/> ;
+    data:usesIdentifierScheme wiki:P932 .
+
+  sub:14_abstract data:hasDescriptionType data:abstract ;
+    prov:value "Leishmania parasites cause a broad spectrum of clinical disease. Here we report the sequencing of the genomes of two species of Leishmania: Leishmania infantum and Leishmania braziliensis. The comparison of these sequences with the published genome of Leishmania major reveals marked conservation of synteny and identifies only approximately 200 genes with a differential distribution between the three species. L. braziliensis, contrary to Leishmania species examined so far, possesses components of a putative RNA-mediated interference pathway, telomere-associated transposable elements and spliced leader-associated SLACS retrotransposons. We show that pseudogene formation and gene loss are the principal forces shaping the different genomes. Genes that are differentially distributed between the species encode proteins implicated in host-pathogen interactions and parasite survival in the macrophage."@en .
+
+  sub:14_citingOrganism1 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1038/ng2053>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000002875;
+    data:hasIdentifier sub:14_organism1.
+  
+  sub:14_organism1 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+
+  sub:14_citingOrganism2 a cito:citation;
+    cito:hasCitingEntity <https://doi.org/10.1038/ng2053>;
+    cito:hasCitationCharacterization cito:extends;
+    cito:hasCitingEntity ncbi_asbID:GCF_000002845;
+    data:hasIdentifier sub:14_organism1.
+  
+  sub:14_organism2 a data:PrimaryResourceIdentifier ;
+    prov:value gad_npub:xxxxx ;
+    data:usesIdentifierScheme "nanopub" .
+}
+
+sub:14_provenance {
+  sub:14_assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:1_journalPublication ;
+    prov:wasAttributedTo sub:1_authors ;
+    prov:hadPrimarySource sub:1_paper_doi ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://pubmed.ncbi.nlm.nih.gov/17572675/> ;
+    prov:wasDerivedFrom sub:1_journal .
+
+  sub:14_authors a prov:Agent ;
+    foaf:name "Christopher S Peacock , Kathy Seeger, David Harris, Lee Murphy, Jeronimo C Ruiz, Michael A Quail, Nick Peters, Ellen Adlem, Adrian Tivey, Martin Aslett, Arnaud Kerhornou, Alasdair Ivens, Audrey Fraser, Marie-Adele Rajandream, Tim Carver, Halina Norbertczak, Tracey Chillingworth, Zahra Hance, Kay Jagels, Sharon Moule, Doug Ormond, Simon Rutter, Rob Squares, Sally Whitehead, Ester Rabbinowitsch, Claire Arrowsmith, Brian White, Scott Thurston, Frédéric Bringaud, Sandra L Baldauf, Adam Faulconbridge, Daniel Jeffares, Daniel P Depledge, Samuel O Oyola, James D Hilley, Loislene O Brito, Luiz R O Tosi, Barclay Barrell, Angela K Cruz, Jeremy C Mottram, Deborah F Smith, Matthew Berriman"@en .
+
+  sub:14_journalPublication a prov:Activity ;
+    rdfs:type eco:ECO_0006016 ;
+    pav:provideBy sub:1_journal ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npa:creationMonth "2007-07"^^xsd:integer ;
+    npa:creationYear "2007"^^xsd:integer .
+
+  sub:14_paper_doi a data:PrimaryResourceIdentifier ;
+    prov:value <https://doi.org/10.1038/ng2053> ;
+    data:usesIdentifierScheme data:doi .  
+    
+  sub:14_journal a prov:Agent ;
+    rdfs:type fabio:Journal ;
+    dcterms:title "Nature Genetics"@en ;
+    prism:volume "39"^^xsd:integer ;
+    prov:hadPrimarySource <https://www.nature.com>.
+}
+
+sub:14_PublicationInfo {
+  this: a prov:entity ;
+    prov:wasGeneratedBy sub:1_automaticAssertion ;
+    prov:wasAttributedTo sub:1_software , sub:1_npubCreators ;
+    prov:wasDerivedFrom fabio:Journal ;
+    prov:hadPrimarySource <https://pubmed.ncbi.nlm.nih.gov/> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject obo:SO_0001248 , sio:SIO_010055 , fabio:journalArticle .
+
+  sub:14_automaticAssertion a prov:Activity ;
+    rdfs:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    np:creationDay "2021-05-15"^^xsd:integer ;
+    np:creationMonth "2021-05"^^xsd:integer ;
+    np:creationYear "2021"^^xsd:integer .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:14_software a prov:Agent;
+    rdfs:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "v1";
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:14_npubCreators a prov:Agent;
+    rdfs:type ncit:C122473 ;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
+}
+
