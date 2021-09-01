@@ -1,11 +1,11 @@
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000209065> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -18,12 +18,13 @@
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000209065_Head {
   this: np:hasAssertion sub:GCF_000209065_assertion ;
     np:hasProvenance sub:GCF_000209065_provenance ;
-    np:hasPublicationInfo sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:GCF_000209065_PublicationInfo ;
+    np:hasPublicationInfo sub:GCF_000209065_PublicationInfo ;
     a np:Nanopublication .
 }
 
@@ -76,9 +77,9 @@ sub:GCF_000209065_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000209065_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2005-08-02"^^xsd:integer ;
-    npa:creationMonth "2005-08"^^xsd:integer ;
-    npa:creationYear "2005"^^xsd:integer .
+    npubDate:creationDay npubDate:20050802;
+    npubDate:creationMonth npubDate:200508;
+    npubDate:creationYear npubDate:2005 .
     
   sub:GCF_000209065_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -87,7 +88,7 @@ sub:GCF_000209065_provenance {
 
 }
 
-sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:GCF_000209065_PublicationInfo {
+sub::GCF_000209065_PublicationInfo {
   this: a prov:entity;
     prov:wasGeneratedBy sub:GCF_000209065_automaticAssertion ;
     prov:wasAttributedTo sub:GCF_000209065_software , sub:GCF_000209065_npubCreators ;
@@ -100,9 +101,9 @@ sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:GCF_000209065_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -120,14 +121,14 @@ sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:GCF_000209065_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_015033655> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -140,6 +141,7 @@ sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:9_sub:GCF_000209065_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_015033655_Head {
@@ -193,9 +195,9 @@ sub:GCA_015033655_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_015033655_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-11-03"^^xsd:integer ;
-    npa:creationMonth "2020-11"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20201103;
+    npubDate:creationMonth npubDate:202011;
+    npubDate:creationYear npubDate:2020 .
   
   sub:GCA_015033655_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -217,9 +219,9 @@ sub:GCA_015033655_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -237,14 +239,14 @@ sub:GCA_015033655_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_015033625> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -257,6 +259,7 @@ sub:GCA_015033655_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_015033625_Head {
@@ -311,9 +314,9 @@ sub:GCA_015033625_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_015033625_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-11-03"^^xsd:integer ;
-    npa:creationMonth "2020-11"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer . 
+    npubDate:creationDay npubDate:20201103;
+    npubDate:creationMonth npubDate:202011;
+    npubDate:creationYear npubDate:2020 . 
     
   sub:GCA_015033625_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -335,9 +338,9 @@ sub:GCA_015033625_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -355,14 +358,14 @@ sub:GCA_015033625_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003177105> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -375,6 +378,7 @@ sub:GCA_015033625_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003177105_Head {
@@ -429,9 +433,9 @@ sub:GCA_003177105_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003177105_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-05-30"^^xsd:integer ;
-    npa:creationMonth "2018-05"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180530;
+    npubDate:creationMonth npubDate:201805;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003177105_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -453,9 +457,9 @@ sub:GCA_003177105_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -473,14 +477,14 @@ sub:GCA_003177105_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003177095> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -493,6 +497,7 @@ sub:GCA_003177105_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003177095_Head {
@@ -548,9 +553,9 @@ sub:GCA_003177095_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003177095_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-05-30"^^xsd:integer ;
-    npa:creationMonth "2018-05"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180530;
+    npubDate:creationMonth npubDate:201805;
+    npubDate:creationYear npubDate:2018 .
 
   sub:GCA_003177095_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -577,9 +582,9 @@ sub:GCA_003177095_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -597,14 +602,14 @@ sub:GCA_003177095_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_015455285> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -617,6 +622,7 @@ sub:GCA_003177095_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_015455285_Head {
@@ -673,9 +679,9 @@ sub:GCA_015455285_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_015455285_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-11-06"^^xsd:integer ;
-    npa:creationMonth "2020-11"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20201106;
+    npubDate:creationMonth npubDate:202011;
+    npubDate:creationYear npubDate:2020 .
 
   sub:GCA_015455285_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -702,9 +708,9 @@ sub:GCA_015455285_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -722,14 +728,14 @@ sub:GCA_015455285_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_002749415> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -742,6 +748,7 @@ sub:GCA_015455285_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_002749415_Head {
@@ -795,9 +802,9 @@ sub:GCA_002749415_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_002749415_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2017-10-03"^^xsd:integer ;
-    npa:creationMonth "2017-10"^^xsd:integer ;
-    npa:creationYear "2017"^^xsd:integer .
+    npubDate:creationDay npubDate:20171003;
+    npubDate:creationMonth npubDate:201710;
+    npubDate:creationYear npubDate:2017 .
 
   sub:GCA_002749415_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -819,9 +826,9 @@ sub:GCA_002749415_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -839,14 +846,14 @@ sub:GCA_002749415_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_013358655> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -859,6 +866,7 @@ sub:GCA_002749415_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_013358655_Head {
@@ -912,9 +920,9 @@ sub:GCA_013358655_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_013358655_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-06-18"^^xsd:integer ;
-    npa:creationMonth "2020-06"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20200618;
+    npubDate:creationMonth npubDate:202006;
+    npubDate:creationYear npubDate:2020 .
     
   sub:GCA_013358655_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -936,9 +944,9 @@ sub:GCA_013358655_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -956,14 +964,14 @@ sub:GCA_013358655_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_002219105> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -976,6 +984,7 @@ sub:GCA_013358655_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_002219105_Head {
@@ -1030,9 +1039,9 @@ sub:GCA_002219105_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_002219105_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2017-09-15"^^xsd:integer ;
-    npa:creationMonth "2017-09"^^xsd:integer ;
-    npa:creationYear "2017"^^xsd:integer .
+    npubDate:creationDay npubDate:20170915;
+    npubDate:creationMonth npubDate:201709;
+    npubDate:creationYear npubDate:2017 .
 
   sub:GCA_002219105_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -1059,9 +1068,9 @@ sub:GCA_002219105_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1079,14 +1088,14 @@ sub:GCA_002219105_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000496795> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1099,6 +1108,7 @@ sub:GCA_002219105_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000496795_Head {
@@ -1153,9 +1163,9 @@ sub:GCA_000496795_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000496795_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2013-11-13"^^xsd:integer ;
-    npa:creationMonth "2013-11"^^xsd:integer ;
-    npa:creationYear "2013"^^xsd:integer .
+    npubDate:creationDay npubDate:20131113;
+    npubDate:creationMonth npubDate:201311;
+    npubDate:creationYear npubDate:2013 .
 
   sub:GCA_000496795_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -1182,9 +1192,9 @@ sub:GCA_000496795_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1202,14 +1212,14 @@ sub:GCA_000496795_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_002749425> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1222,6 +1232,7 @@ sub:GCA_000496795_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_002749425_Head {
@@ -1275,9 +1286,9 @@ sub:GCA_002749425_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_002749425_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2017-10-03"^^xsd:integer ;
-    npa:creationMonth "2017-10"^^xsd:integer ;
-    npa:creationYear "2017"^^xsd:integer .
+    npubDate:creationDay npubDate:20171003;
+    npubDate:creationMonth npubDate:201710;
+    npubDate:creationYear npubDate:2017 .
     
   sub:GCA_002749425_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -1299,9 +1310,9 @@ sub:GCA_002749425_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1319,14 +1330,14 @@ sub:GCA_002749425_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000331405> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1339,6 +1350,7 @@ sub:GCA_002749425_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000331405_Head {
@@ -1393,9 +1405,9 @@ sub:GCA_000331405_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000331405_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2013-01-11"^^xsd:integer ;
-    npa:creationMonth "2013-01-11"^^xsd:integer ;
-    npa:creationYear "2013-01-11"^^xsd:integer .
+    npubDate:creationDay npubDate:20130111;
+    npubDate:creationMonth npubDate:201301;
+    npubDate:creationYear npubDate:2013 .
 
   sub:GCA_000331405_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -1422,9 +1434,9 @@ sub:GCA_000331405_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1442,14 +1454,14 @@ sub:GCA_000331405_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000327425> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1462,6 +1474,7 @@ sub:GCA_000331405_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000327425_Head {
@@ -1516,9 +1529,9 @@ sub:GCA_000327425_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000327425_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2013-01-02"^^xsd:integer ;
-    npa:creationMonth "2013-01"^^xsd:integer ;
-    npa:creationYear "2013"^^xsd:integer .
+    npubDate:creationDay npubDate:20130102;
+    npubDate:creationMonth npubDate:201301;
+    npubDate:creationYear npubDate:2013 .
 
   sub:GCA_000327425_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -1545,9 +1558,9 @@ sub:GCA_000327425_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1565,14 +1578,14 @@ sub:GCA_000327425_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_900252365> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1585,6 +1598,7 @@ sub:GCA_000327425_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_900252365_Head {
@@ -1636,9 +1650,9 @@ sub:GCA_900252365_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_900252365_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-01-24"^^xsd:integer ;
-    npa:creationMonth "2018-01"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180124;
+    npubDate:creationMonth npubDate:201801;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_900252365_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -1660,9 +1674,9 @@ sub:GCA_900252365_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1680,14 +1694,14 @@ sub:GCA_900252365_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594645> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1700,6 +1714,7 @@ sub:GCA_900252365_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594645_Head {
@@ -1753,9 +1768,9 @@ sub:GCA_003594645_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594645_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer . 
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 . 
 
   sub:GCA_003594645_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -1777,9 +1792,9 @@ sub:GCA_003594645_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1797,14 +1812,14 @@ sub:GCA_003594645_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594625> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1817,6 +1832,7 @@ sub:GCA_003594645_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594625_Head {
@@ -1870,9 +1886,9 @@ sub:GCA_003594625_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594625_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594625_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -1894,9 +1910,9 @@ sub:GCA_003594625_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1914,14 +1930,14 @@ sub:GCA_003594625_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000300495> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -1934,6 +1950,7 @@ sub:GCA_003594625_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000300495_Head {
@@ -1987,9 +2004,9 @@ sub:GCA_000300495_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000300495_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2012-10-01"^^xsd:integer ;
-    npa:creationMonth "2012-10"^^xsd:integer ;
-    npa:creationYear "2012"^^xsd:integer .
+    npubDate:creationDay npubDate:20121001;
+    npubDate:creationMonth npubDate:201210;
+    npubDate:creationYear npubDate:2012 .
     
   sub:GCA_000300495_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2011,9 +2028,9 @@ sub:GCA_000300495_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2031,14 +2048,14 @@ sub:GCA_000300495_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000188675> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2051,6 +2068,7 @@ sub:GCA_000300495_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000188675_Head {
@@ -2105,9 +2123,9 @@ sub:GCA_000188675_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000188675_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2012-10-02"^^xsd:integer ;
-    npa:creationMonth "2012-10"^^xsd:integer ;
-    npa:creationYear "2012"^^xsd:integer .
+    npubDate:creationDay npubDate:20121002;
+    npubDate:creationMonth npubDate:201210;
+    npubDate:creationYear npubDate:2012 .
 
   sub:GCA_000188675_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -2134,9 +2152,9 @@ sub:GCA_000188675_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2154,14 +2172,14 @@ sub:GCA_000188675_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000365225> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2174,6 +2192,7 @@ sub:GCA_000188675_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000365225_Head {
@@ -2228,9 +2247,9 @@ sub:GCA_000365225_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000365225_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2013-04-22"^^xsd:integer ;
-    npa:creationMonth "2013-04"^^xsd:integer ;
-    npa:creationYear "2013"^^xsd:integer .
+    npubDate:creationDay npubDate:20130422;
+    npubDate:creationMonth npubDate:201304;
+    npubDate:creationYear npubDate:2013 .
 
   sub:GCA_000365225_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -2257,9 +2276,9 @@ sub:GCA_000365225_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2277,14 +2296,14 @@ sub:GCA_000365225_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594405> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2297,6 +2316,7 @@ sub:GCA_000365225_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594405_Head {
@@ -2350,9 +2370,9 @@ sub:GCA_003594405_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594405_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594405_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2374,9 +2394,9 @@ sub:GCA_003594405_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2394,14 +2414,14 @@ sub:GCA_003594405_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594465> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2414,6 +2434,7 @@ sub:GCA_003594405_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594465_Head {
@@ -2467,9 +2488,9 @@ sub:GCA_003594465_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594465_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594465_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2491,9 +2512,9 @@ sub:GCA_003594465_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2511,14 +2532,14 @@ sub:GCA_003594465_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594485> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2531,6 +2552,7 @@ sub:GCA_003594465_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594485_Head {
@@ -2584,9 +2606,9 @@ sub:GCA_003594485_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594485_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594485_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2608,9 +2630,9 @@ sub:GCA_003594485_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2628,14 +2650,14 @@ sub:GCA_003594485_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594585> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2648,6 +2670,7 @@ sub:GCA_003594485_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594585_Head {
@@ -2701,9 +2724,9 @@ sub:GCA_003594585_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594585_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
 
   sub:GCA_003594585_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2725,9 +2748,9 @@ sub:GCA_003594585_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2745,14 +2768,14 @@ sub:GCA_003594585_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594445> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2765,6 +2788,7 @@ sub:GCA_003594585_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594445_Head {
@@ -2818,9 +2842,9 @@ sub:GCA_003594445_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594445_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594445_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2842,9 +2866,9 @@ sub:GCA_003594445_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2862,14 +2886,14 @@ sub:GCA_003594445_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594425> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2882,6 +2906,7 @@ sub:GCA_003594445_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594425_Head {
@@ -2935,9 +2960,9 @@ sub:GCA_003594425_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594425_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594425_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -2959,9 +2984,9 @@ sub:GCA_003594425_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -2979,14 +3004,14 @@ sub:GCA_003594425_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594605> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -2999,6 +3024,7 @@ sub:GCA_003594425_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594605_Head {
@@ -3052,9 +3078,9 @@ sub:GCA_003594605_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594605_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594605_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -3076,9 +3102,9 @@ sub:GCA_003594605_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3096,14 +3122,14 @@ sub:GCA_003594605_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594385> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3116,6 +3142,7 @@ sub:GCA_003594605_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594385_Head {
@@ -3169,9 +3196,9 @@ sub:GCA_003594385_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594385_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003594385_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -3193,9 +3220,9 @@ sub:GCA_003594385_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3213,14 +3240,14 @@ sub:GCA_003594385_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003719455> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3233,6 +3260,7 @@ sub:GCA_003594385_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003719455_Head {
@@ -3286,9 +3314,9 @@ sub:GCA_003719455_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003719455_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-11-08"^^xsd:integer ;
-    npa:creationMonth "2018-11"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20181108;
+    npubDate:creationMonth npubDate:201811;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003719455_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -3310,9 +3338,9 @@ sub:GCA_003719455_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3330,14 +3358,14 @@ sub:GCA_003719455_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_010117175> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3350,6 +3378,7 @@ sub:GCA_003719455_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_010117175_Head {
@@ -3403,9 +3432,9 @@ sub:GCA_010117175_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_010117175_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-02-03"^^xsd:integer ;
-    npa:creationMonth "2020-02"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20200203;
+    npubDate:creationMonth npubDate:202002;
+    npubDate:creationYear npubDate:2020 .
     
   sub:GCA_010117175_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -3427,9 +3456,9 @@ sub:GCA_010117175_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3447,14 +3476,14 @@ sub:GCA_010117175_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003719155> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3467,6 +3496,7 @@ sub:GCA_010117175_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003719155_Head {
@@ -3524,9 +3554,9 @@ sub:GCA_003719155_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003719155_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-11-05"^^xsd:integer ;
-    npa:creationMonth "2018-11"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20181105;
+    npubDate:creationMonth npubDate:201811;
+    npubDate:creationYear npubDate:2018 .
 
   sub:GCA_003719155_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -3553,9 +3583,9 @@ sub:GCA_003719155_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3573,14 +3603,14 @@ sub:GCA_003719155_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_010117215> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3593,6 +3623,7 @@ sub:GCA_003719155_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_010117215_Head {
@@ -3646,9 +3677,9 @@ sub:GCA_010117215_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_010117215_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-02-03"^^xsd:integer ;
-    npa:creationMonth "2020-02"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20200203;
+    npubDate:creationMonth npubDate:202002;
+    npubDate:creationYear npubDate:2020 .
     
   sub:GCA_010117215_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -3670,9 +3701,9 @@ sub:GCA_010117215_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3690,14 +3721,14 @@ sub:GCA_010117215_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594705> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3710,6 +3741,7 @@ sub:GCA_010117215_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594705_Head {
@@ -3764,9 +3796,9 @@ sub:GCA_003594705_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594705_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
 
   sub:GCA_003594705_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -3793,9 +3825,9 @@ sub:GCA_003594705_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3813,14 +3845,14 @@ sub:GCA_003594705_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594685> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3833,6 +3865,7 @@ sub:GCA_003594705_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594685_Head {
@@ -3887,9 +3920,9 @@ sub:GCA_003594685_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594685_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
 
   sub:GCA_003594685_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -3916,9 +3949,9 @@ sub:GCA_003594685_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -3936,14 +3969,14 @@ sub:GCA_003594685_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003594715> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -3956,6 +3989,7 @@ sub:GCA_003594685_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003594715_Head {
@@ -4010,9 +4044,9 @@ sub:GCA_003594715_provenance {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003594715_submitter;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-09-24"^^xsd:integer ;
-    npa:creationMonth "2018-09"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20180924;
+    npubDate:creationMonth npubDate:201809;
+    npubDate:creationYear npubDate:2018 .
 
   sub:GCA_003594715_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -4039,9 +4073,9 @@ sub:GCA_003594715_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4060,14 +4094,14 @@ sub:GCA_003594715_PublicationInfo {
 }
 
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000002725> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4078,9 +4112,9 @@ sub:GCA_003594715_PublicationInfo {
 @prefix fbcv: <http://purl.obolibrary.org/obo/> .
 @prefix pato: <http://purl.obolibrary.org/obo/> .
 @prefix obi: <http://purl.obolibrary.org/obo/> .
-@prefix ero: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000002725_Head {
@@ -4134,9 +4168,9 @@ sub:GCF_000002725_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000002725_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2011-02-14"^^xsd:integer ;
-    npa:creationMonth "2011-02"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npubDate:creationDay npubDate:20110214;
+    npubDate:creationMonth npubDate:201102;
+    npubDate:creationYear npubDate:2011 .
 
   sub:GCF_000002725_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -4163,9 +4197,9 @@ sub:GCF_000002725_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4183,14 +4217,14 @@ sub:GCF_000002725_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_005317125> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4201,9 +4235,9 @@ sub:GCF_000002725_PublicationInfo {
 @prefix fbcv: <http://purl.obolibrary.org/obo/> .
 @prefix pato: <http://purl.obolibrary.org/obo/> .
 @prefix obi: <http://purl.obolibrary.org/obo/> .
-@prefix ero: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_005317125_Head {
@@ -4252,9 +4286,9 @@ sub:GCA_005317125_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_005317125_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2019-05-14"^^xsd:integer ;
-    npa:creationMonth "2019-05"^^xsd:integer ;
-    npa:creationYear "2019"^^xsd:integer .
+    npubDate:creationDay npubDate:20190514;
+    npubDate:creationMonth npubDate:201905;
+    npubDate:creationYear npubDate:2019 .
     
   sub:GCA_005317125_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -4276,9 +4310,9 @@ sub:GCA_005317125_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4296,14 +4330,14 @@ sub:GCA_005317125_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000227135> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4316,6 +4350,7 @@ sub:GCA_005317125_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000227135_Head {
@@ -4369,9 +4404,9 @@ sub:GCF_000227135_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000227135_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2011-12-13"^^xsd:integer ;
-    npa:creationMonth "2011-12"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npubDate:creationDay npubDate:20111213;
+    npubDate:creationMonth npubDate:201112;
+    npubDate:creationYear npubDate:2011 .
 
   sub:GCF_000227135_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -4398,9 +4433,9 @@ sub:GCF_000227135_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4418,14 +4453,14 @@ sub:GCF_000227135_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000755165> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4438,6 +4473,7 @@ sub:GCF_000227135_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000755165_Head {
@@ -4494,9 +4530,9 @@ sub:GCF_000755165_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000755165_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2014-09-16"^^xsd:integer ;
-    npa:creationMonth "2014-09"^^xsd:integer ;
-    npa:creationYear "2014"^^xsd:integer .
+    npubDate:creationDay npubDate:20140916;
+    npubDate:creationMonth npubDate:201409;
+    npubDate:creationYear npubDate:2014 .
 
   sub:GCF_000755165_comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -4523,9 +4559,9 @@ sub:GCF_000755165_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4543,14 +4579,14 @@ sub:GCF_000755165_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_014466975> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4563,6 +4599,7 @@ sub:GCF_000755165_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_014466975_Head {
@@ -4611,9 +4648,9 @@ sub:GCA_014466975_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_014466975_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-09-03"^^xsd:integer ;
-    npa:creationMonth "2020-09"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20200903;
+    npubDate:creationMonth npubDate:202009;
+    npubDate:creationYear npubDate:2020 .
     
   sub:GCA_014466975_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -4635,9 +4672,9 @@ sub:GCA_014466975_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4655,14 +4692,14 @@ sub:GCA_014466975_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_001403695> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4675,6 +4712,7 @@ sub:GCA_014466975_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_001403695_Head {
@@ -4721,9 +4759,9 @@ sub:GCA_001403695_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_001403695_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2015-09-17"^^xsd:integer ;
-    npa:creationMonth "2015-09"^^xsd:integer ;
-    npa:creationYear "2015"^^xsd:integer .
+    npubDate:creationDay npubDate:20150917;
+    npubDate:creationMonth npubDate:201509;
+    npubDate:creationYear npubDate:2015 .
     
   sub:GCA_001403695_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -4745,9 +4783,9 @@ sub:GCA_001403695_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4765,14 +4803,14 @@ sub:GCA_001403695_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000002875> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4783,9 +4821,9 @@ sub:GCA_001403695_PublicationInfo {
 @prefix fbcv: <http://purl.obolibrary.org/obo/> .
 @prefix pato: <http://purl.obolibrary.org/obo/> .
 @prefix obi: <http://purl.obolibrary.org/obo/> .
-@prefix geno: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000002875_Head {
@@ -4844,9 +4882,9 @@ sub:GCF_000002875_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000002875_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2011-11-08"^^xsd:integer ;
-    npa:creationMonth "2011-08"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npubDate:creationDay npubDate:20111108;
+    npubDate:creationMonth npubDate:201108;
+    npubDate:creationYear npubDate:2011 .
 
   sub:comment a prov:Entity ;
     rdfs:type dcterms:description ;
@@ -4873,9 +4911,9 @@ sub:GCF_000002875_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -4893,14 +4931,14 @@ sub:GCF_000002875_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000002845> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -4911,9 +4949,9 @@ sub:GCF_000002875_PublicationInfo {
 @prefix fbcv: <http://purl.obolibrary.org/obo/> .
 @prefix pato: <http://purl.obolibrary.org/obo/> .
 @prefix obi: <http://purl.obolibrary.org/obo/> .
-@prefix geno: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000002845_Head {
@@ -4971,9 +5009,9 @@ sub:GCF_000002845_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000002845_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2011-11-07"^^xsd:integer ;
-    npa:creationMonth "2011-11"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npubDate:creationDay npubDate:20111107;
+    npubDate:creationMonth npubDate:201111;
+    npubDate:creationYear npubDate:2011 .
     
   sub:GCF_000002845_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -4995,9 +5033,9 @@ sub:GCF_000002845_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5015,14 +5053,14 @@ sub:GCF_000002845_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_014139745> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5035,6 +5073,7 @@ sub:GCF_000002845_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_014139745_Head {
@@ -5083,9 +5122,9 @@ sub:GCA_014139745_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_014139745_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2020-08-14"^^xsd:integer ;
-    npa:creationMonth "2020-08"^^xsd:integer ;
-    npa:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20200814;
+    npubDate:creationMonth npubDate:202008;
+    npubDate:creationYear npubDate:2020 .
     
   sub:GCA_014139745_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5107,9 +5146,9 @@ sub:GCA_014139745_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5127,14 +5166,14 @@ sub:GCA_014139745_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCF_000234665> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5145,9 +5184,9 @@ sub:GCA_014139745_PublicationInfo {
 @prefix fbcv: <http://purl.obolibrary.org/obo/> .
 @prefix pato: <http://purl.obolibrary.org/obo/> .
 @prefix obi: <http://purl.obolibrary.org/obo/> .
-@prefix geno: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCF_000234665_Head {
@@ -5205,9 +5244,9 @@ sub:GCF_000234665_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCF_000234665_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2011-11-08"^^xsd:integer ;
-    npa:creationMonth "2011-11"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npubDate:creationDay npubDate:20111108;
+    npubDate:creationMonth npubDate:201111;
+    npubDate:creationYear npubDate:2011 .
     
   sub:GCF_000234665_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5229,9 +5268,9 @@ sub:GCF_000234665_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5249,14 +5288,14 @@ sub:GCF_000234665_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_017916305> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5269,6 +5308,7 @@ sub:GCF_000234665_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_017916305_Head {
@@ -5322,9 +5362,9 @@ sub:GCA_017916305_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_017916305_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-04-15"^^xsd:integer ;
-    npa:creationMonth "2021-04"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210415;
+    npubDate:creationMonth npubDate:202104;
+    npubDate:creationYear npubDate:2021 .
     
   sub:GCA_017916305_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5346,9 +5386,9 @@ sub:GCA_017916305_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5366,14 +5406,14 @@ sub:GCA_017916305_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_017916335> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5386,6 +5426,7 @@ sub:GCA_017916305_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_017916335_Head {
@@ -5439,9 +5480,9 @@ sub:GCA_017916335_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_017916335_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-04-15"^^xsd:integer ;
-    npa:creationMonth "2021-04"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210415;
+    npubDate:creationMonth npubDate:202104;
+    npubDate:creationYear npubDate:2021 .
     
   sub:GCA_017916335_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5463,9 +5504,9 @@ sub:GCA_017916335_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5483,14 +5524,14 @@ sub:GCA_017916335_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_017916325> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5503,6 +5544,7 @@ sub:GCA_017916335_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_017916325_Head {
@@ -5556,9 +5598,9 @@ sub:GCA_017916325_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_017916325_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-04-15"^^xsd:integer ;
-    npa:creationMonth "2021-04"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210415;
+    npubDate:creationMonth npubDate:202104;
+    npubDate:creationYear npubDate:2021 .
     
   sub:GCA_017916325_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5580,9 +5622,9 @@ sub:GCA_017916325_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5600,14 +5642,14 @@ sub:GCA_017916325_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_017918215> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5620,6 +5662,7 @@ sub:GCA_017916325_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_017918215_Head {
@@ -5673,9 +5716,9 @@ sub:GCA_017918215_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_017918215_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-04-15"^^xsd:integer ;
-    npa:creationMonth "2021-04"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210415;
+    npubDate:creationMonth npubDate:202104;
+    npubDate:creationYear npubDate:2021 .
     
   sub:GCA_017918215_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5697,9 +5740,9 @@ sub:GCA_017918215_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5717,14 +5760,14 @@ sub:GCA_017918215_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_017918225> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5737,6 +5780,7 @@ sub:GCA_017918215_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_017918225_Head {
@@ -5790,9 +5834,9 @@ sub:GCA_017918225_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_017918225_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-04-15"^^xsd:integer ;
-    npa:creationMonth "2021-04"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210415;
+    npubDate:creationMonth npubDate:202104;
+    npubDate:creationYear npubDate:2021 .
     
   sub:GCA_017918225_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5814,9 +5858,9 @@ sub:GCA_017918225_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5834,14 +5878,14 @@ sub:GCA_017918225_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000409445> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5854,6 +5898,7 @@ sub:GCA_017918225_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000409445_Head {
@@ -5907,9 +5952,9 @@ sub:GCA_000409445_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000409445_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2016-05-17"^^xsd:integer ;
-    npa:creationMonth "2016-05"^^xsd:integer ;
-    npa:creationYear "2016"^^xsd:integer .
+    npubDate:creationDay npubDate:20160517;
+    npubDate:creationMonth npubDate:201605;
+    npubDate:creationYear npubDate:2016 .
     
   sub:GCA_000409445_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -5931,9 +5976,9 @@ sub:GCA_000409445_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -5951,14 +5996,14 @@ sub:GCA_000409445_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_000410695> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -5971,6 +6016,7 @@ sub:GCA_000409445_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_000410695_Head {
@@ -6024,9 +6070,9 @@ sub:GCA_000410695_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_000410695_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2016-09-16"^^xsd:integer ;
-    npa:creationMonth "2016-09-16"^^xsd:integer ;
-    npa:creationYear "2016"^^xsd:integer .
+    npubDate:creationDay npubDate:20160916;
+    npubDate:creationMonth npubDate:201609;
+    npubDate:creationYear npubDate:2016 .
     
   sub:GCA_000410695_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -6048,9 +6094,9 @@ sub:GCA_000410695_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -6068,14 +6114,14 @@ sub:GCA_000410695_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_009731335> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -6088,6 +6134,7 @@ sub:GCA_000410695_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_009731335_Head {
@@ -6141,9 +6188,9 @@ sub:GCA_009731335_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_009731335_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2019-11-27"^^xsd:integer ;
-    npa:creationMonth "2019-11"^^xsd:integer ;
-    npa:creationYear "2019"^^xsd:integer .
+    npubDate:creationDay npubDate:20191127;
+    npubDate:creationMonth npubDate:201911;
+    npubDate:creationYear npubDate:2019 .
     
   sub:GCA_009731335_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -6165,9 +6212,9 @@ sub:GCA_009731335_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -6185,14 +6232,14 @@ sub:GCA_009731335_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003664525> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -6205,6 +6252,7 @@ sub:GCA_009731335_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003664525_Head {
@@ -6258,9 +6306,9 @@ sub:GCA_003664525_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003664525_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2018-10-16"^^xsd:integer ;
-    npa:creationMonth "2018-10"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npubDate:creationDay npubDate:20181016;
+    npubDate:creationMonth npubDate:201810;
+    npubDate:creationYear npubDate:2018 .
     
   sub:GCA_003664525_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -6282,9 +6330,9 @@ sub:GCA_003664525_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -6302,14 +6350,14 @@ sub:GCA_003664525_PublicationInfo {
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <https://github.com/GenKnowlets/genknowlets/GAD_npubGCA_003992445> .
-@prefix sub: <https://github.com/GenKnowlets/genknowlets/#> . 
+@prefix this: <https://github.com/GenKnowlets/genknowlets/> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix org_npub: <https://github.com/GenKnowlets/genknowlets/organism_npub/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix npa: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asbID: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -6322,6 +6370,7 @@ sub:GCA_003664525_PublicationInfo {
 @prefix obi: <http://purl.obolibrary.org/obo/> .
 @prefix eco: <https://evidenceontology.org/term/> .
 @prefix efo:  <http://www.ebi.ac.uk/efo/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 
 sub:GCA_003992445_Head {
@@ -6375,9 +6424,9 @@ sub:GCA_003992445_provenance {
     rdfs:type eco:ECO_0000203; 
     prov:wasAssociatedWith ncit:C45799, sub:GCA_003992445_submitter; 
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2019-01-04"^^xsd:integer ;
-    npa:creationMonth "2019-01"^^xsd:integer ;
-    npa:creationYear "2019"^^xsd:integer .
+    npubDate:creationDay npubDate:20190104;
+    npubDate:creationMonth npubDate:201901;
+    npubDate:creationYear npubDate:2019 .
     
   sub:GCA_003992445_ftp a prov:Entity ;
     rdfs:type dcterms:dataset ;
@@ -6399,9 +6448,9 @@ sub:GCA_003992445_PublicationInfo {
     rdfs:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    npa:creationDay "2021-05-15"^^xsd:integer ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515;
+    npubDate:creationMonth npubDate:202105;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
