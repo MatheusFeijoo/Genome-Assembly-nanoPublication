@@ -57,7 +57,7 @@ sub:1_assertion {
     data:hasIdentifier sub:1_organism1.
   
   sub:1_organism1 a data:PrimaryResourceIdentifier ;
-    prov:value gad_npub:xxxxx ;
+    prov:value gad_npub:GCF_000209065 ;
     data:usesIdentifierScheme "nanopub" .
 }
 
@@ -77,9 +77,9 @@ sub:1_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:1_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2005-07-15"^^xsd:integer ;
-    npa:creationMonth "2005-07"^^xsd:integer ;
-    npa:creationYear "2005"^^xsd:integer .
+    npa:creationDay npubDate:20050715 ;
+    npa:creationMonth npubDate:200507;
+    npa:creationYear npubDate:2005 .
 
   sub:1_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1126/science.1112631> ;
@@ -105,9 +105,9 @@ sub:1_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -185,7 +185,7 @@ sub:2_assertion {
     data:hasIdentifier sub:2_organism1.
   
   sub:2_organism1 a data:PrimaryResourceIdentifier ;
-    prov:value gad_npub:xxxxx ;
+    prov:value gad_npub:GCF_000209065 ;
     data:usesIdentifierScheme "nanopub" .
 }
 
@@ -205,9 +205,9 @@ sub:2_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:2_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2005-07-15"^^xsd:integer ;
-    npa:creationMonth "2005-07"^^xsd:integer ;
-    npa:creationYear "2005"^^xsd:integer .
+    npa:creationDay npubDate:20050715 ;
+    npa:creationMonth npubDate:200507;
+    npa:creationYear npubDate:2005.
 
   sub:2_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1126/science.1112181> ;
@@ -233,9 +233,9 @@ sub:2_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -318,7 +318,7 @@ sub:3_assertion {
     data:hasIdentifier sub:3_organism1.
   
   sub:3_organism1 a data:PrimaryResourceIdentifier ;
-    prov:value gad_npub:xxxxx ;
+    prov:value gad_npub:GCA_003177095 ;
     data:usesIdentifierScheme "nanopub" .
 
   sub:3_citingOrganism2 a cito:citation;
@@ -328,7 +328,7 @@ sub:3_assertion {
     data:hasIdentifier sub:3_organism2.
   
   sub:3_organism2 a data:PrimaryResourceIdentifier ;
-    prov:value gad_npub:xxxxx ;
+    prov:value gad_npub:GCA_003177105 ;
     data:usesIdentifierScheme "nanopub" .
 }
 
@@ -348,8 +348,8 @@ sub:3_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:3_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationMonth "2018-05"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npa:creationMonth npubDate:201805;
+    npa:creationYear npubDate:2018 .
 
   sub:3_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1099/mgen.0.000177> ;
@@ -375,9 +375,9 @@ sub:3_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -475,8 +475,8 @@ sub:4_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:4_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationMonth "2021-05"^^xsd:integer ;
-    npa:creationYear "2021"^^xsd:integer .
+    npa:creationMonth npubDate:202105;
+    npa:creationYear npubDate:2021 .
 
   sub:4_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1139/gen-2020-0092> ;
@@ -503,9 +503,9 @@ sub:4_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -607,9 +607,9 @@ sub:5_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:5_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2019-07-01"^^xsd:integer ;
-    npa:creationMonth "2019-07"^^xsd:integer ;
-    npa:creationYear "2019"^^xsd:integer .
+    npa:creationDay npubDate:20190701 ;
+    npa:creationMonth npubDate:201907;
+    npa:creationYear npubDate:2019 .
 
   sub:5_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1093/gbe/evz129> ;
@@ -636,9 +636,9 @@ sub:5_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -739,9 +739,9 @@ sub:6_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:6_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2014-01-30"^^xsd:integer ;
-    npa:creationMonth "2014-01"^^xsd:integer ;
-    npa:creationYear "2014"^^xsd:integer .
+    npa:creationDay npubDate:20140130 ;
+    npa:creationMonth npubDate:201401;
+    npa:creationYear npubDate:2014 .
 
   sub:6_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1128/genomea.01114-13> ;
@@ -767,9 +767,9 @@ sub:6_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -882,9 +882,9 @@ sub:7_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:7_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2012-10-05"^^xsd:integer ;
-    npa:creationMonth "2012-10"^^xsd:integer ;
-    npa:creationYear "2012"^^xsd:integer .
+    npa:creationDay npubDate:20121005 ;
+    npa:creationMonth npubDate:201210;
+    npa:creationYear npubDate:2012 .
 
   sub:7_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1186/1471-2164-13-531> ;
@@ -910,9 +910,9 @@ sub:7_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1014,9 +1014,9 @@ sub:8_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:8_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2011-03-08"^^xsd:integer ;
-    npa:creationMonth "2011-03"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npa:creationDay npubDate:20110308 ;
+    npa:creationMonth npubDate:201103;
+    npa:creationYear npubDate:2011 .
 
   sub:8_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1371/journal.pntd.0000984> ;
@@ -1042,9 +1042,9 @@ sub:8_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1157,9 +1157,9 @@ sub:9_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:9_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2018-10-24"^^xsd:integer ;
-    npa:creationMonth "2018-10"^^xsd:integer ;
-    npa:creationYear "2018"^^xsd:integer .
+    npa:creationDay npubDate:20181024 ;
+    npa:creationMonth npubDate:201810;
+    npa:creationYear npubDate:2018 .
 
   sub:9_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1186/s12864-018-5112-0> ;
@@ -1185,9 +1185,9 @@ sub:9_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1321,8 +1321,8 @@ sub:10_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:1_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationMonth "2011-12"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npa:creationMonth npubDate:201112;
+    npa:creationYear npubDate:2011 .
 
   sub:10_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1101/gr.122945.111> ;
@@ -1348,9 +1348,9 @@ sub:10_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1451,9 +1451,9 @@ sub:11_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:1_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2005-07-15"^^xsd:integer ;
-    npa:creationMonth "2005-07"^^xsd:integer ;
-    npa:creationYear "2005"^^xsd:integer .
+    npa:creationDay npubDate:20050715 ;
+    npa:creationMonth npubDate:200507;
+    npa:creationYear npubDate:2005 .
 
   sub:11_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1126/science.1112680> ;
@@ -1479,9 +1479,9 @@ sub:11_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1582,8 +1582,8 @@ sub:12_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:1_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationMonth "2011-12"^^xsd:integer ;
-    npa:creationYear "2011"^^xsd:integer .
+    npa:creationMonth npubDate:201112;
+    npa:creationYear npubDate:2011 .
 
   sub:12_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1101/gr.123430.111> ;
@@ -1609,9 +1609,9 @@ sub:12_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1712,9 +1712,9 @@ sub:13_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:1_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationDay "2015-02-24"^^xsd:integer ;
-    npa:creationMonth "2015-02"^^xsd:integer ;
-    npa:creationYear "2015"^^xsd:integer .
+    npa:creationDay npubDate:20150224 ;
+    npa:creationMonth npubDate:201502;
+    npa:creationYear npubDate:2015 .
 
   sub:13_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1038/srep08550> ;
@@ -1740,9 +1740,9 @@ sub:13_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
@@ -1854,8 +1854,8 @@ sub:14_provenance {
     rdfs:type eco:ECO_0006016 ;
     pav:provideBy sub:1_journal ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    npa:creationMonth "2007-07"^^xsd:integer ;
-    npa:creationYear "2007"^^xsd:integer .
+    npa:creationMonth npubDate:200707;
+    npa:creationYear npubDate:2007 .
 
   sub:14_paper_doi a data:PrimaryResourceIdentifier ;
     prov:value <https://doi.org/10.1038/ng2053> ;
@@ -1881,9 +1881,9 @@ sub:14_PublicationInfo {
     rdfs:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npa:creationDay npubDate:20210515 ;
+    npa:creationMonth npubDate:202105 ;
+    npa:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
