@@ -1,9 +1,10 @@
-@prefix this: <http://example.org/nanopub-validator-example/RAtAU6U_xKTH016Eoiu11SswQkBu1elB_3_BoDJWH3arA> .
-@prefix sub: <http://example.org/nanopub-validator-example/RAtAU6U_xKTH016Eoiu11SswQkBu1elB_3_BoDJWH3arA#> .
+@prefix this: <https://github.com/GenKnowlets/genknowlets/org_pub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npubDate: <http://www.nanopub.org/nschema#> .
 @prefix rdf: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sio: <http://semanticscience.org/resource/> .
 @prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
@@ -46,9 +47,9 @@ sub:provenance {
     rdf:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    np:creationDay "2020-10-18"^^xsd:integer ;
-    np:creationMonth "2020-10"^^xsd:integer ;
-    np:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20201018 ;
+    npubDate:creationMonth npubDate:202010 ;
+    npubDate:creationYear npubDate:2020 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en ;
@@ -66,7 +67,6 @@ sub:provenance {
     dcterms:source <https://doi.org/10.1093/database/baaa062> .
 }
 
-
 sub:publicationInfo {
   this: a prov:entity;
     prov:wasGeneratedBy sub:automaticAssertion ;
@@ -80,15 +80,15 @@ sub:publicationInfo {
     rdf:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515 ;
+    npubDate:creationMonth npubDate:202105 ;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
     
   sub:software a prov:Agent;
-    rdfs:type prov:softwareAgent; 
+    rdf:type prov:softwareAgent; 
     foaf:name "genscraper"@en;
     pav:version "v1";
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
@@ -96,12 +96,13 @@ sub:publicationInfo {
     edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
 
   sub:npubCreators a prov:Agent;
-    rdfs:type ncit:C122473 ;
+    rdf:type ncit:C122473 ;
     pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X> .
 }
 
-@prefix this: <http://example.org/nanopub-validator-example/RAtAU6U_xKTH016Eoiu11SswQkBu1elB_3_BoDJWH3arA> .
-@prefix sub: <http://example.org/nanopub-validator-example/RAtAU6U_xKTH016Eoiu11SswQkBu1elB_3_BoDJWH3arA#> .
+
+@prefix this: <https://github.com/GenKnowlets/genknowlets/org_pub> .
+@prefix sub: <https://github.com/GenKnowlets/genknowlets/> . 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix pav: <http://purl.org/pav/> .
@@ -148,9 +149,9 @@ sub:provenance {
     rdf:type eco:ECO_0000203;
     prov:wasAssociatedWith ncit:C45799;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
-    np:creationDay "2020-10-18"^^xsd:integer ;
-    np:creationMonth "2020-10"^^xsd:integer ;
-    np:creationYear "2020"^^xsd:integer .
+    npubDate:creationDay npubDate:20201018 ;
+    npubDate:creationMonth npubDate:202010 ;
+    npubDate:creationYear npubDate:2020 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en ;
@@ -168,7 +169,6 @@ sub:provenance {
     dcterms:source <https://doi.org/10.1093/database/baaa062> .
 }
 
-
 sub:publicationInfo {
   this: a prov:entity;
     prov:wasGeneratedBy sub:automaticAssertion ;
@@ -182,9 +182,9 @@ sub:publicationInfo {
     rdf:type eco:ECO_0000203 ;
     prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
     dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
-    np:creationDay "2021-05-15"^^xsd:integer ;
-    np:creationMonth "2021-05"^^xsd:integer ;
-    np:creationYear "2021"^^xsd:integer .
+    npubDate:creationDay npubDate:20210515 ;
+    npubDate:creationMonth npubDate:202105 ;
+    npubDate:creationYear npubDate:2021 .
 
   ncit:C45799 a foaf:organization, prov:Agent ;
     foaf:name "NCBI - National Center for Biotechnology Information"@en .
