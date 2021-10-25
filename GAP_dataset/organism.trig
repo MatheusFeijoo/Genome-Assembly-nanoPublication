@@ -1,0 +1,3296 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/8df628768f55cb32ac5ff904b78e188b> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/8df628768f55cb32ac5ff904b78e188b#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid1470209 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Paratrypanosoma confusum"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/66997?genome_assembly_id=362761> .
+  edam:data_0925 ncit:C25256 "1"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=1470209> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid1470209> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid1470209> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid1470209> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/c7dfa97cf1684fa0b63e906b552ba769> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/c7dfa97cf1684fa0b63e906b552ba769#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5691 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma brucei"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/24?genome_assembly_id=371812> .
+  edam:data_0925 ncit:C25256 "5"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5691> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5691> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value ", or African trypanosome, is a ubiquitous unicellular flagellated protozoan. It is the causal agent of African sleeping sickness and is transmitted by the tse-tse fly. African trypanosomiasis is a zoonosis and both cattle and wild game can act as reservoirs of human infective trypanosomes. The incidence of this disease in humans  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5691> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5691> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/6ea29a844bd6057a3bc6f88842be0ee2> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/6ea29a844bd6057a3bc6f88842be0ee2#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5692 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma congolense"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/10876?genome_assembly_id=328001> .
+  edam:data_0925 ncit:C25256 "3"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5692> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5692> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " is a ubiquitous unicellular flagellated protozoan. It  can be transmitted by the tsetse fly. African trypanosomiasis can cause major economic losses to cattle. African trypanosomes are important model organisms to study antigenic variation, genetic exchange, among other interesting biological phenomena. The sequencing of  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5692> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5692> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/2b0acc6294c926d12cc72998acc5ae8d> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/2b0acc6294c926d12cc72998acc5ae8d#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid83891 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma conorhini"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/73764?genome_assembly_id=418299> .
+  edam:data_0925 ncit:C25256 "Scaffold"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=83891> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid83891> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid83891> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid83891> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/4b1e1113bca24b0cb0d3079dba872715> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/4b1e1113bca24b0cb0d3079dba872715#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5693 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma cruzi"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/25?genome_assembly_id=22605> .
+  edam:data_0925 ncit:C25256 "38"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5693> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value ", a protozoan parasite, causes American Trypanosomiasis or Chagas' disease. The disease is transmitted to humans through the feces of infected bloodsucking insects in endemic areas of Central and South America, or occasionally by nonvectorial mechanisms, such as blood transfusion. Between 16 and 18 million persons are estimated  to be infected with this parasite throughout that geographical region. The pathology of this disease is characterized by cardiac involvement, which typically appears decades after the initial infection and may result in cardiac arrhythmias, ventricular aneurysm, congestive heart failure, thromboembolism, and sudden cardiac death.,  No effective treatement or vaccine against this disease exists. The sequencing of the ,  genome, along with other kinetoplastid genomes such as , , ,  and ,  will provide insights into the kinetoplastid parasite biology and comparative genomics, and is likely to be a powerful approach to understand parasite-host interactions, molecular pathogenesis, leading to improved vaccine and drug targets. "@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5693> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5693> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/edf26b0f958ef070963e14285416d803> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/edf26b0f958ef070963e14285416d803#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5694 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma equiperdum"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/41709?genome_assembly_id=320165> .
+  edam:data_0925 ncit:C25256 "Scaffold"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5694> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5694> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5694> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5694> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/726ab85214aab2c92cd47201562e0136> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/726ab85214aab2c92cd47201562e0136#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid71804 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma grayi"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/31973?genome_assembly_id=59353> .
+  edam:data_0925 ncit:C25256 "University of Dundee"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=71804> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid71804> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Trypanosoma grayi, parasite of Crocodylus niloticus, is transmitted by the Tsetse fly. Phylogenomic approaches demonstrate that T. grayi is more closely related to Trypanosoma cruzi which is found in Central and South America, than it is to the African trypanosomes T. brucei, T. congolense and T. vivax, and T. grayi and the African trypanosomes are  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid71804> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid71804> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/6bae90762ae310f34812369c956f4464> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/6bae90762ae310f34812369c956f4464#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5698 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma rangeli"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/10993?genome_assembly_id=418283> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5698> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5698> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value ".,  is a parasite frequently infecting humans in Latin-American countries. Although this species is non-pathogenic in the vertebrate host, its biological and epidemiological characteristics are studied within the context of the biology and epidemiology of , , the causative agent for Chagas disease.  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5698> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5698> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/6202e0a6b3c305a6895c7563e8f987dc> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/6202e0a6b3c305a6895c7563e8f987dc#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid67003 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma theileri"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/54043?genome_assembly_id=313797> .
+  edam:data_0925 ncit:C25256 "University of Edinburgh"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=67003> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid67003> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid67003> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid67003> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/6a9dd39804caec44ab25d9120bca1987> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/6a9dd39804caec44ab25d9120bca1987#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5699 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Trypanosoma vivax"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/10877?genome_assembly_id=1666974> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5699> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5699> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " is a ubiquitous unicellular flagellated protozoan. It  can be transmitted by the tsetse fly. African trypanosomiasis can cause major economic losses to cattle. African trypanosomes are important model organisms to study antigenic variation, genetic exchange, among other interesting biological phenomena. The sequencing of  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5699> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5699> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/ead4802ec71b45f0e4bcdd9dc3a21335> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/ead4802ec71b45f0e4bcdd9dc3a21335#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5674 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania adleri"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov/0> .
+  edam:data_0925 ncit:C25256 "Chromosome"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5674> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5674> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5674> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5674> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/81bb79c06e7d0ea71c1e8403b4287e6f> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/81bb79c06e7d0ea71c1e8403b4287e6f#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5667 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania aethiopica"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/14335?genome_assembly_id=434011> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5667> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5667> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Causes human cutaneous leishmaniasis in Ethiopia, Eritrea and Kenya where its distribution is closely related to the habitat of rock hyraxes, the specific hosts, and restricted to the highlands. Cutaneous leishmaniasis is frequently observed in Tigray alongside the border of Ethiopia and Eritrea. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5667> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5667> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/b17056ba487af03d42da5c07a5d5609e> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/b17056ba487af03d42da5c07a5d5609e#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5659 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania amazonensis"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/13266?genome_assembly_id=522795> .
+  edam:data_0925 ncit:C25256 "3"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5659> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5659> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "The etiological agent of human cutaneous leishmaniasis in the Amazon region of Brazil. Leishmania amazonensis is a protozoan parasite responsible for simple and diffuse forms of cutaneous leishmaniasis in humans. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5659> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5659> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/1f5e29f05f0718aabbb2bb3dad3550cf> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/1f5e29f05f0718aabbb2bb3dad3550cf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid40284 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania arabica"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/30552?genome_assembly_id=282358> .
+  edam:data_0925 ncit:C25256 "Kinetoplastid Genomes Consortium"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=40284> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid40284> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "The kinetoplastids are a group of protozoa that include three major human disease-causing parasites: The Leishmania parasites and the African and American trypanosomes, each of which rank within the top 10 in terms of global impact. Leishmania arabica is limited to Saudi Arabia where it has been found in certain rodent species and in feral dogs. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid40284> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid40284> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/f1a148716165a6de3729b862f85079f8> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/f1a148716165a6de3729b862f85079f8#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5660 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania braziliensis"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/718?genome_assembly_id=30664> .
+  edam:data_0925 ncit:C25256 "5"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5660> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5660> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Protozoan parasites of the genus ,  cause a broad spectrum of diseases, collectively known as leishmaniasis, that occur predominantly in tropical and subtropical regions. ,  are transmitted by different species of sand flies, and depending on the species involved and the genetic makeup or immunological status of the  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5660> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5660> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/eba98b81c83f33d87919c8bfbfb4a6c1> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/eba98b81c83f33d87919c8bfbfb4a6c1#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid44271 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania chagasi"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/13273?genome_assembly_id=985569> .
+  edam:data_0925 ncit:C25256 "4"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=44271> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid44271> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid44271> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid44271> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/f3d232d9ea237b287f3987b0428d2dad> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/f3d232d9ea237b287f3987b0428d2dad#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5661 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania donovani"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/3516?genome_assembly_id=34546> .
+  edam:data_0925 ncit:C25256 "11"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5661> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5661> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Human pathogen responsible for visceral as well as cutaneous and mucocutaneous leishmaniasis. The organism causes disease in humans by destroying infected host cells causing abnormal enlargement of the target organs among other symptoms. Other symptoms of this disease can include a prolonged fever, a decreased appetite, weight loss, signs of anemia,  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5661> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5661> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/da187c6dde786f05d6861dbba2f2babc> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/da187c6dde786f05d6861dbba2f2babc#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5663 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania enriettii"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/16917?genome_assembly_id=1603104> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5663> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5663> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Leishmania enrietti was first identified and described as the causative agent of cutaneous leishmaniasis in guinea pigs. It has not been possible to establish the disease in humans, monkeys, dogs, rabbits, rats or mice. Nonetheless, L. enrietti infection in guinea pigs has proven to be an important experimental model of human cutaneous leishmaniasis. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5663> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5663> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/0f41a61113c0ba526ad15772ca2d5d4d> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/0f41a61113c0ba526ad15772ca2d5d4d#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid40285 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania gerbilli"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/30027?genome_assembly_id=47706> .
+  edam:data_0925 ncit:C25256 "Kinetoplastid Genomes Consortium"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=40285> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid40285> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid40285> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid40285> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/4a45233f6cb28d19283256ac50c4f85c> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/4a45233f6cb28d19283256ac50c4f85c#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5670 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania guyanensis"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/17936?genome_assembly_id=412054> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5670> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5670> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Leishmaniasis is an infectious disease due to a protozoan parasite of the genus Leishmania. Among the disease manifestations, mucocutaneous leishmaniasis (MCL) is one of the most severe forms caused by Leishmania Viannia subgenus. It includes South and Central America species such as L. braziliensis, L. panamensis and L. guyanensis. These species lead  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5670> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5670> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/21cb320d872221b5a056abe936c8ad75> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/21cb320d872221b5a056abe936c8ad75#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5671 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania infantum"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/249?genome_assembly_id=28618> .
+  edam:data_0925 ncit:C25256 "5"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5671> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5671> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " also known as , , causes canine and feline leishmaniasis and both cutaneous and visceral leishmaniasis in humans. This is an intracellular protozoan transmitted by several species of phlebotomine sandflies and is commonly found in Latin America, Asia, Africa and the Mediterranean region.Inside the host, the  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5671> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5671> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/95b90a594c56ef9216ad2af3713693be> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/95b90a594c56ef9216ad2af3713693be#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5677 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania lainsoni"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/72942?genome_assembly_id=412269> .
+  edam:data_0925 ncit:C25256 "CDC"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5677> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5677> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5677> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5677> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/431a1787f8bb9f931af3e0d4c86c8b25> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/431a1787f8bb9f931af3e0d4c86c8b25#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5664 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania major"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/23?genome_assembly_id=22597> .
+  edam:data_0925 ncit:C25256 "6"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5664> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5664> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " is a flagellated protozoan that causes a wide spectrum of human diseases, with clinical manifestations ranging from spontaneously healing skin ulcers to severe visceral disease. The infection rate worldwide is around two million new cases per year, with one tenth of the world population at risk of infection. Leishmaniasis is  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5664> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5664> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/355cbc93d184e7f718c4ed610e08eb20> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/355cbc93d184e7f718c4ed610e08eb20#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid1580590 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania martiniquensis"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/100504?genome_assembly_id=1604510> .
+  edam:data_0925 ncit:C25256 "1"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=1580590> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid1580590> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid1580590> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid1580590> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/db2dffa1ffb340adbb7ffc73897fc5fa> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/db2dffa1ffb340adbb7ffc73897fc5fa#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5665 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania mexicana"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/14469?genome_assembly_id=44795> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5665> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5665> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Parasites of the genus Leishmania responsible for human cutaneous leishmaniasis in the New World form 2 major taxonomic divisions: the Leishmania braziliensis and the L. mexicana complexes. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5665> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5665> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/e30703b9d3301d2a29fe244b2509b113> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/e30703b9d3301d2a29fe244b2509b113#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid2249476 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania orientalis"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/100505?genome_assembly_id=1604511> .
+  edam:data_0925 ncit:C25256 "1"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=2249476> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid2249476> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid2249476> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid2249476> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/85261cd68c53d808c5ffa822f705058a> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/85261cd68c53d808c5ffa822f705058a#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5679 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania panamensis"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/13991?genome_assembly_id=208736> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5679> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5679> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "The kinetoplastids are a group of protozoa that include three major human disease-causing parasites: The Leishmania parasites and the African and American trypanosomes, each of which rank within the top 10 in terms of global impact. Leishmania panamensis is the main causative agent of tegumentary leishmaniasis in Panama. In Panama, the disease has a  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5679> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5679> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/1ef1aeeb6c819c69158374b78c8a859d> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/1ef1aeeb6c819c69158374b78c8a859d#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5681 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania peruviana"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/40809?genome_assembly_id=255070> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5681> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5681> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Leishmania (Viannia) peruviana, the principal agent of cutaneous leishmaniasis throughout much of the Peruvian Andes, is transmitted by phlebotomine sandflies to humans inside and around their houses. This species has been isolated from domestic dogs in the Peruvian Andes, thus suggesting they may be serving as reservoir hosts for L. peruviana. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5681> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5681> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/d2e085abbdd580d0eee20d079818a590> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/d2e085abbdd580d0eee20d079818a590#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid1638716 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania sp. AIIMS/LM/SS/PKDL/LD-974"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/30429?genome_assembly_id=232620> .
+  edam:data_0925 ncit:C25256 "4"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=1638716> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid1638716> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Isolates from a population of Leishmania which are clearly distinct from currently recognized species are tentatively designated at the species level. These unnamed isolates have not yet been characterized using traditional methods, or the species name has not yet been validly published. ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid1638716> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid1638716> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/c5e7edbbe851d9a979a1b49e653e67ca> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/c5e7edbbe851d9a979a1b49e653e67ca#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5689 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania tarentolae"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/7682?genome_assembly_id=747717> .
+  edam:data_0925 ncit:C25256 "2"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5689> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5689> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5689> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5689> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/69f2bcef9f0fa1416435b1b65b7f6fd6> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/69f2bcef9f0fa1416435b1b65b7f6fd6#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid5666 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania tropica"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/14404?genome_assembly_id=986573> .
+  edam:data_0925 ncit:C25256 "5"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5666> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid5666> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value "Leishmania tropica is one of the causative agents of cutaneous leishmaniasis. Approximately 12 million people worldwide are affected by leishmaniasis, and more than 350 million people live in at-risk areas.  Indeed, Leishmania species infections, which are primarily transmitted by the bite of infected sand flies, produce a substantial burden of disease  ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid5666> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid5666> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/org/b83b6bc05fb237335bbbc2c5909e9e50> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/org/b83b6bc05fb237335bbbc2c5909e9e50#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix ncbi_asb: <https://www.ncbi.nlm.nih.gov/assembly/> .
+@prefix edam: <http://edamontology.org/page> .
+@prefix ncbi_taxID: <https://www.ncbi.nlm.nih.gov/Taxonomy/> .
+@prefix obo: <https://purl.obolibrary.org/obo/> .
+@prefix ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  ncbi_taxID:txid62297 sio:SIO_000628 sio:SIO_010000 ;
+    foaf:name "Leishmania turanica"@en ;
+    rdf:type obo:Taxon_5653 ;
+    ncit:C101282 edam:data_0925 ;
+    ncit:C67045 <https://www.ncbi.nlm.nih.gov//genome/30020?genome_assembly_id=47698> .
+  edam:data_0925 ncit:C25256 "Kinetoplastid Genomes Consortium"^^xsd:integer .
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo ncit:C45799 ;
+    pav:curatedBy ncit:C45799;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=62297> , <https://www.ncbi.nlm.nih.gov/genome/?term=txid62297> ;
+    ncit:C101282 sub:description ; 
+    ncit:C101282 sub:citation ;
+    dcterms:accessRights <https://www.ncbi.nlm.nih.gov/home/about/policies/> ;
+    eco:ECO_0000501 <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=5693> .
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203;
+    prov:wasAssociatedWith ncit:C45799;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:23 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en ;
+    dcterms:source <https://www.ncbi.nlm.nih.gov/> . 
+
+  sub:description a prov:Entity;
+    rdf:type dcterms:description;
+    prov:value " ."@en; 
+    prov:wasQuotedFrom <https://www.ncbi.nlm.nih.gov/genome/?term=txid62297> .
+
+  sub:citation a prov:Entity;
+    rdf:type dcterms:bibliographicCitation;
+    prov:value "Schoch CL, et al. NCBI Taxonomy: a comprehensive update on curation, resources and tools. Database (Oxford). 2020: baaa062."@en ;
+    dcterms:source <https://pubmed.ncbi.nlm.nih.gov/32761142/> ;
+    dcterms:source <https://doi.org/10.1093/database/baaa062> .    
+}
+
+sub:pubinfo {
+  this: a prov:entity;
+    prov:wasGeneratedBy sub:automaticAssertion ;
+    prov:wasAttributedTo sub:software , sub:npubCreators ;
+    prov:wasDerivedFrom ncit:C45799 ;
+    prov:hadPrimarySource <https://www.ncbi.nlm.nih.gov/Taxonomy>, <https://www.ncbi.nlm.nih.gov/genome/?term=txid62297> ;
+    dcterms:accessRights <http://opendatacommons.org/licenses/odbl/1.0/> ;
+    dcterms:subject sio:SIO_010000.
+
+  sub:automaticAssertion a prov:Activity ;
+    rdf:type eco:ECO_0000203 ;
+    prov:wasAssociatedWith ncit:C45799, prov:softwareAgent, ncit:C122473 ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    npdate:creationDay npdate:23 ;
+    npdate:creationMonth npdate:10 ;
+    npdate:creationYear npdate:2021 .
+
+  ncit:C45799 a foaf:organization, prov:Agent ;
+    foaf:name "NCBI - National Center for Biotechnology Information"@en .
+    
+  sub:software a prov:Agent;
+    rdf:type prov:softwareAgent; 
+    foaf:name "genscraper"@en;
+    pav:version "1.0"^^xsd:integer;
+    pav:createdBy <https://orcid.org/0000-0001-9582-4595>, <https://orcid.org/0000-0002-0943-5356>, <https://orcid.org/0000-0002-0792-8157>, <https://orcid.org/0000-0002-7930-612X>;
+    dcterms:source <https://github.com/GenKnowlets> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> .
+
+  sub:npubCreators a prov:Agent;
+    rdf:type ncit:C122473 ;
+    pav:curatedBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0001-9582-4595> .
+}
